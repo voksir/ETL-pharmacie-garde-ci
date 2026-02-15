@@ -1,0 +1,391 @@
+from __future__ import annotations
+
+import argparse
+import json
+import logging
+import re
+import sys
+from datetime import date, datetime, timezone
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+import pdfplumber
+
+# ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+logger = logging.getLogger("unppci_parse_pdf")
+
+# ---------------------------------------------------------------------------
+# Constantes
+# ---------------------------------------------------------------------------
+SCRIPT_DIR = Path(__file__).resolve().parent
+
+# Exemple observé : "SEMAINE DU SAMEDI 02 MARS 2019 AU VENDREDI 08 MARS 2019"
+WEEK_RE = re.compile(
+    r"SEMAINE\s+DU\s+"
+    r"(?:[A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+\s+)?"        # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                          # jour (groupe 1)
+    r"([A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+)\s+"             # mois (groupe 2)
+    r"(\d{4})\s+"                            # année (groupe 3)
+    r"AU\s+"
+    r"(?:[A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+\s+)?"        # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                          # jour (groupe 4)
+    r"([A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+)\s+"             # mois (groupe 5)
+    r"(\d{4})",                              # année (groupe 6)
+    re.IGNORECASE,
+)
+
+PHARM_RE = re.compile(r"^(PHCIE|PHARMACIE)\s+(.+)$", re.IGNORECASE)
+
+MONTHS: Dict[str, int] = {
+    "JANVIER": 1,
+    "FEVRIER": 2, "FÉVRIER": 2,
+    "MARS": 3,
+    "AVRIL": 4,
+    "MAI": 5,
+    "JUIN": 6,
+    "JUILLET": 7,
+    "AOUT": 8, "AOÛT": 8,
+    "SEPTEMBRE": 9,
+    "OCTOBRE": 10,
+    "NOVEMBRE": 11,
+    "DECEMBRE": 12, "DÉCEMBRE": 12,
+}
+
+PHONE_LIKE_RE = re.compile(r"\d{2}(?:[\s./-]?\d{2}){3,}")
+
+# Mots-clés d'adresse (pour exclure des faux « noms de zone »)
+ADDRESS_KEYWORDS = frozenset([
+    "ROUTE", "CARREFOUR", "AVENUE", "BD", "BOULEVARD", "FACE", "PRES",
+    "PRÈS", "DERRIERE", "DERRIÈRE", "ARRÊT", "ARRET", "RUE", "LOT",
+    "IMMEUBLE", "VILLA", "CITÉ", "CITE", "CAMP", "MARCHE", "STATION",
+])
+
+# Mots-clés d'en-tête à ignorer
+HEADER_PREFIXES = ("UNION", "GARDE", "SEMAINE", "PERMANENCE", "SECTION",
+                   "TOUR", "PHARMACIE", "PHCIE", "TEL", "N°", "N  ")
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+def clean(s: str) -> str:
+    """Nettoie le texte extrait du PDF."""
+    s = (s or "").replace("\xa0", " ").strip()
+    s = re.sub(r"\s+", " ", s)
+    # Corrige les concaténations de saut de page (ex: "...BUS 04SEMAINE ...")
+    s = re.sub(r"(\d)SEMAINE", r"\1 SEMAINE", s, flags=re.IGNORECASE)
+    return s.strip()
+
+
+def fr_date_to_iso(day: str, month_name: str, year: str) -> str:
+    """Convertit une date française en ISO 8601."""
+    m = MONTHS.get(month_name.upper())
+    if not m:
+        raise ValueError(f"Mois inconnu : {month_name}")
+    return date(int(year), m, int(day)).isoformat()
+
+
+def extract_phones(text: str) -> List[str]:
+    """Extrait les numéros de téléphone (8 ou 10 chiffres) depuis un texte."""
+    parts = re.split(r"[\/|,;]", text)
+    phones: List[str] = []
+    for p in parts:
+        digits = re.sub(r"\D+", "", p)
+        if len(digits) in (8, 10):
+            phones.append(digits)
+    # Dédoublonnage stable
+    seen: set[str] = set()
+    out: List[str] = []
+    for x in phones:
+        if x not in seen:
+            seen.add(x)
+            out.append(x)
+    return out
+
+
+def strip_phones_from_line(line: str) -> str:
+    """Retire les segments qui ressemblent à des numéros de téléphone d'une ligne.
+
+    Retourne la partie « adresse » restante.
+    """
+    # Remplacer chaque match téléphone par un espace
+    cleaned = PHONE_LIKE_RE.sub(" ", line)
+    # Supprimer aussi les séparateurs orphelins (/, |, ;)
+    cleaned = re.sub(r"[\/|;,]\s*$", "", cleaned)
+    cleaned = re.sub(r"^\s*[\/|;,]", "", cleaned)
+    return clean(cleaned)
+
+
+def _is_pure_digits_line(line: str) -> bool:
+    """Vérifie si la ligne ne contient que des chiffres/espaces/séparateurs."""
+    return bool(re.fullmatch(r"[\d\s./-]+", line))
+
+
+def looks_like_area(line: str) -> bool:
+    """Heuristique : détecte si une ligne est un nom de zone géographique.
+
+    Critères :
+    - Non vide, entièrement en MAJUSCULES
+    - Ne commence pas par un mot-clé d'en-tête
+    - Ne contient pas de mot-clé d'adresse
+    - Longueur raisonnable (≤ 45 caractères)
+    - N'est pas une ligne de chiffres purs (téléphones)
+    """
+    if not line:
+        return False
+
+    up = line.upper().strip()
+
+    # Exclure les en-têtes
+    if any(up.startswith(prefix) for prefix in HEADER_PREFIXES):
+        return False
+
+    # Exclure les mots-clés d'adresse
+    words = set(re.findall(r"[A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+", up))
+    if words & ADDRESS_KEYWORDS:
+        return False
+
+    # Exclure les lignes trop longues
+    if len(line) > 45:
+        return False
+
+    # Exclure les lignes de chiffres purs (téléphones)
+    if _is_pure_digits_line(line):
+        return False
+
+    # Les zones dans les PDF UNPPCI sont en majuscules
+    return line == up
+
+
+# ---------------------------------------------------------------------------
+# Parsing principal
+# ---------------------------------------------------------------------------
+def parse_unppci_pdf(
+    pdf_path: str,
+    *,
+    source_url: str = "",
+) -> Dict[str, Any]:
+    """Parse un PDF UNPPCI et retourne un payload structuré multi-semaines.
+
+    Args:
+        pdf_path: Chemin vers le fichier PDF.
+        source_url: URL d'origine du PDF (pour traçabilité).
+    """
+    scraped_at = datetime.now(timezone.utc).isoformat()
+    pdf_path_obj = Path(pdf_path)
+
+    logger.info("Parsing PDF : %s", pdf_path_obj.name)
+
+    weeks: List[Dict[str, Any]] = []
+    current_week: Optional[Dict[str, Any]] = None
+    current_area: Optional[Dict[str, Any]] = None
+
+    total_lines = 0
+    classified = {"week": 0, "area": 0, "pharmacy": 0, "address": 0,
+                  "phone": 0, "skipped": 0, "ignored_pre_week": 0}
+
+    with pdfplumber.open(pdf_path) as pdf:
+        logger.info("  Pages : %d", len(pdf.pages))
+
+        for page_num, page in enumerate(pdf.pages, 1):
+            # layout=True pour mieux respecter la disposition en colonnes
+            txt = page.extract_text(layout=True) or ""
+            lines = [clean(x) for x in txt.splitlines()]
+            logger.debug("  Page %d : %d lignes", page_num, len(lines))
+
+            for line in lines:
+                if not line:
+                    continue
+                total_lines += 1
+
+                # --- Détection de semaine ---
+                mweek = WEEK_RE.search(line)
+                if mweek:
+                    try:
+                        ws = fr_date_to_iso(mweek.group(1), mweek.group(2), mweek.group(3))
+                        we = fr_date_to_iso(mweek.group(4), mweek.group(5), mweek.group(6))
+                    except ValueError as exc:
+                        logger.warning("  Date invalide (page %d) : %s — %s", page_num, line, exc)
+                        continue
+
+                    current_week = {"week_start": ws, "week_end": we, "areas": []}
+                    weeks.append(current_week)
+                    current_area = None
+                    classified["week"] += 1
+                    logger.debug("    [SEMAINE] %s → %s", ws, we)
+                    continue
+
+                # Avant la première semaine, on ignore tout
+                if current_week is None:
+                    classified["ignored_pre_week"] += 1
+                    continue
+
+                # --- Lignes de section (ignorées) ---
+                if line.upper().startswith("SECTION"):
+                    classified["skipped"] += 1
+                    continue
+
+                # --- Détection de zone géographique ---
+                if looks_like_area(line):
+                    current_area = {"area": line, "pharmacies": []}
+                    current_week["areas"].append(current_area)
+                    classified["area"] += 1
+                    logger.debug("    [ZONE] %s", line)
+                    continue
+
+                # --- Détection de pharmacie ---
+                mph = PHARM_RE.match(line)
+                if mph and current_area is not None:
+                    rest = mph.group(2).strip()
+
+                    # Nom : couper avant " - " / " – " / "/"
+                    name_raw = re.split(r"\s*[–-]\s*|\s*/\s*", rest, maxsplit=1)[0].strip()
+                    name_raw = clean(name_raw)
+
+                    # Téléphones sur la même ligne
+                    phones = extract_phones(line)
+
+                    current_area["pharmacies"].append({
+                        "name_raw": name_raw,
+                        "address_raw": "",
+                        "phones_raw": phones,
+                    })
+                    classified["pharmacy"] += 1
+                    logger.debug("    [PHARMACIE] %s (tél: %s)", name_raw, phones)
+                    continue
+
+                # --- Ligne d'adresse / téléphone (rattachée à la dernière pharmacie) ---
+                if current_area and current_area["pharmacies"]:
+                    last = current_area["pharmacies"][-1]
+
+                    # Vérifier que ce n'est pas un faux positif
+                    if WEEK_RE.search(line):
+                        classified["skipped"] += 1
+                        continue
+
+                    has_phone = bool(PHONE_LIKE_RE.search(line))
+
+                    if has_phone:
+                        # Extraire les téléphones et les ajouter
+                        new_phones = extract_phones(line)
+                        for ph in new_phones:
+                            if ph not in last["phones_raw"]:
+                                last["phones_raw"].append(ph)
+                        classified["phone"] += 1
+
+                        # Extraire aussi la partie adresse résiduelle
+                        addr_part = strip_phones_from_line(line)
+                        if addr_part and not _is_pure_digits_line(addr_part):
+                            last["address_raw"] = clean(
+                                (last["address_raw"] + " " + addr_part).strip()
+                            )
+                            logger.debug("    [ADDR+TEL] addr='%s' tél=%s", addr_part, new_phones)
+                        else:
+                            logger.debug("    [TEL] %s", new_phones)
+                    else:
+                        # Ligne d'adresse pure
+                        last["address_raw"] = clean(
+                            (last["address_raw"] + " " + line).strip()
+                        )
+                        classified["address"] += 1
+                        logger.debug("    [ADRESSE] %s", line)
+                    continue
+
+                # Ligne non classifiée
+                classified["skipped"] += 1
+                logger.debug("    [???] %s", line)
+
+    # --- Statistiques ---
+    total_areas = sum(len(w["areas"]) for w in weeks)
+    total_pharmacies = sum(
+        len(a["pharmacies"]) for w in weeks for a in w["areas"]
+    )
+    logger.info(
+        "Résultat : %d semaines, %d zones, %d pharmacies",
+        len(weeks), total_areas, total_pharmacies,
+    )
+    logger.info(
+        "Classification : %d lignes — semaine=%d, zone=%d, pharmacie=%d, "
+        "adresse=%d, téléphone=%d, ignoré=%d, pré-semaine=%d",
+        total_lines, classified["week"], classified["area"],
+        classified["pharmacy"], classified["address"], classified["phone"],
+        classified["skipped"], classified["ignored_pre_week"],
+    )
+
+    if total_pharmacies == 0:
+        logger.warning("⚠ Aucune pharmacie extraite — vérifier la structure du PDF")
+
+    return {
+        "source": "unppci",
+        "source_url": source_url,
+        "source_file": pdf_path_obj.name,
+        "scraped_at": scraped_at,
+        "weeks": weeks,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Point d'entrée CLI
+# ---------------------------------------------------------------------------
+def main() -> None:
+    """Point d'entrée standalone pour tester le parsing d'un PDF."""
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+        stream=sys.stderr,
+    )
+
+    parser = argparse.ArgumentParser(
+        description="Parse un PDF UNPPCI de tours de garde et produit du JSON"
+    )
+    parser.add_argument(
+        "pdf", nargs="?", default=None,
+        help="Chemin vers le PDF à parser (si omis, cherche dans downloads_unppci/)",
+    )
+    parser.add_argument(
+        "--source-url", default="",
+        help="URL d'origine du PDF (pour traçabilité)",
+    )
+    parser.add_argument(
+        "--output", "-o", default=None,
+        help="Fichier JSON de sortie (défaut: stdout)",
+    )
+    args = parser.parse_args()
+
+    # Trouver le PDF
+    if args.pdf:
+        pdf_path = Path(args.pdf)
+    else:
+        # Chercher le premier PDF dans downloads_unppci/
+        dl_dir = SCRIPT_DIR / "downloads_unppci"
+        pdfs = sorted(dl_dir.glob("*.pdf")) if dl_dir.exists() else []
+        if not pdfs:
+            logger.error("Aucun PDF trouvé. Spécifiez un chemin ou lancez unppci_discover.py --download")
+            sys.exit(1)
+        pdf_path = pdfs[0]
+        logger.info("PDF auto-détecté : %s", pdf_path.name)
+
+    if not pdf_path.exists():
+        logger.error("Fichier introuvable : %s", pdf_path)
+        sys.exit(1)
+
+    # Parser
+    payload = parse_unppci_pdf(str(pdf_path), source_url=args.source_url)
+
+    # Sortie JSON
+    json_str = json.dumps(payload, ensure_ascii=False, indent=2)
+
+    if args.output:
+        out_path = Path(args.output)
+        out_path.write_text(json_str, encoding="utf-8")
+        logger.info("JSON écrit : %s", out_path)
+    else:
+        sys.stdout.reconfigure(encoding="utf-8")
+        print(json_str)
+
+
+if __name__ == "__main__":
+    main()
