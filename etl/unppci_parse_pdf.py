@@ -7,7 +7,7 @@ import re
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 import pdfplumber
 
@@ -21,22 +21,72 @@ logger = logging.getLogger("unppci_parse_pdf")
 # ---------------------------------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
 
-# Exemple observé : "SEMAINE DU SAMEDI 02 MARS 2019 AU VENDREDI 08 MARS 2019"
-WEEK_RE = re.compile(
+# Caractères accentués fréquents dans les PDF UNPPCI
+_ACC = r"A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ"
+
+# --- Regex pour les en-têtes de semaine ---
+# Les PDF UNPPCI utilisent 3 formats possibles :
+#
+# Format A (même mois) :
+#   "SEMAINE DU SAMEDI 07 AU VENDREDI 13 FEVRIER 2026"
+#   → jour_debut, jour_fin, mois_partagé, année_partagée
+#
+# Format B (mois différents, année partagée) :
+#   "SEMAINE DU SAMEDI 28 FEVRIER AU VENDREDI 06 MARS 2026"
+#   → jour_debut, mois_debut, jour_fin, mois_fin, année_partagée
+#
+# Format C (ancien, 2 mois + 2 années) :
+#   "SEMAINE DU SAMEDI 02 MARS 2019 AU VENDREDI 08 MARS 2019"
+#   → jour_debut, mois_debut, année_debut, jour_fin, mois_fin, année_fin
+
+WEEK_RE_A = re.compile(
     r"SEMAINE\s+DU\s+"
-    r"(?:[A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+\s+)?"        # jour de la semaine (optionnel)
-    r"(\d{1,2})\s+"                          # jour (groupe 1)
-    r"([A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+)\s+"             # mois (groupe 2)
-    r"(\d{4})\s+"                            # année (groupe 3)
+    rf"(?:[{_ACC}]+\s+)?"           # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                 # jour début (groupe 1)
     r"AU\s+"
-    r"(?:[A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+\s+)?"        # jour de la semaine (optionnel)
-    r"(\d{1,2})\s+"                          # jour (groupe 4)
-    r"([A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+)\s+"             # mois (groupe 5)
-    r"(\d{4})",                              # année (groupe 6)
+    rf"(?:[{_ACC}]+\s+)?"           # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                 # jour fin (groupe 2)
+    rf"([{_ACC}]+)\s+"              # mois partagé (groupe 3)
+    r"(\d{4})",                     # année partagée (groupe 4)
     re.IGNORECASE,
 )
 
+WEEK_RE_B = re.compile(
+    r"SEMAINE\s+DU\s+"
+    rf"(?:[{_ACC}]+\s+)?"           # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                 # jour début (groupe 1)
+    rf"([{_ACC}]+)\s+"              # mois début (groupe 2)
+    r"AU\s+"
+    rf"(?:[{_ACC}]+\s+)?"           # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                 # jour fin (groupe 3)
+    rf"([{_ACC}]+)\s+"              # mois fin (groupe 4)
+    r"(\d{4})",                     # année partagée (groupe 5)
+    re.IGNORECASE,
+)
+
+WEEK_RE_C = re.compile(
+    r"SEMAINE\s+DU\s+"
+    rf"(?:[{_ACC}]+\s+)?"           # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                 # jour début (groupe 1)
+    rf"([{_ACC}]+)\s+"              # mois début (groupe 2)
+    r"(\d{4})\s+"                   # année début (groupe 3)
+    r"AU\s+"
+    rf"(?:[{_ACC}]+\s+)?"           # jour de la semaine (optionnel)
+    r"(\d{1,2})\s+"                 # jour fin (groupe 4)
+    rf"([{_ACC}]+)\s+"              # mois fin (groupe 5)
+    r"(\d{4})",                     # année fin (groupe 6)
+    re.IGNORECASE,
+)
+
+# Détection de pharmacie en début de ligne (format Abidjan)
 PHARM_RE = re.compile(r"^(PHCIE|PHARMACIE)\s+(.+)$", re.IGNORECASE)
+
+# Détection de pharmacie avec ville en préfixe (format Intérieur)
+# Ex: "ABENGOUROU PHCIE DU MARCHE / MME ..."
+CITY_PHARM_RE = re.compile(
+    r"^([A-Z][A-Z\s-]{2,}?)\s+(PHCIE|PHARMACIE)\s+(.+)$",
+    re.IGNORECASE,
+)
 
 MONTHS: Dict[str, int] = {
     "JANVIER": 1,
@@ -60,11 +110,12 @@ ADDRESS_KEYWORDS = frozenset([
     "ROUTE", "CARREFOUR", "AVENUE", "BD", "BOULEVARD", "FACE", "PRES",
     "PRÈS", "DERRIERE", "DERRIÈRE", "ARRÊT", "ARRET", "RUE", "LOT",
     "IMMEUBLE", "VILLA", "CITÉ", "CITE", "CAMP", "MARCHE", "STATION",
+    "QUARTIER", "PLACE", "ROND", "ENTRE", "APRES", "APRÈS", "DEVANT",
 ])
 
 # Mots-clés d'en-tête à ignorer
 HEADER_PREFIXES = ("UNION", "GARDE", "SEMAINE", "PERMANENCE", "SECTION",
-                   "TOUR", "PHARMACIE", "PHCIE", "TEL", "N°", "N  ")
+                   "TOUR", "TEL", "N°", "N  ")
 
 
 # ---------------------------------------------------------------------------
@@ -85,6 +136,39 @@ def fr_date_to_iso(day: str, month_name: str, year: str) -> str:
     if not m:
         raise ValueError(f"Mois inconnu : {month_name}")
     return date(int(year), m, int(day)).isoformat()
+
+
+def _try_parse_week(line: str) -> Optional[Tuple[str, str]]:
+    """Tente de parser une ligne comme un en-tête de semaine.
+
+    Retourne (week_start_iso, week_end_iso) ou None.
+    Essaie les 3 formats dans l'ordre : C (le plus spécifique) → B → A.
+    """
+    # Format C : DD MOIS ANNEE AU DD MOIS ANNEE
+    mc = WEEK_RE_C.search(line)
+    if mc:
+        ws = fr_date_to_iso(mc.group(1), mc.group(2), mc.group(3))
+        we = fr_date_to_iso(mc.group(4), mc.group(5), mc.group(6))
+        return ws, we
+
+    # Format B : DD MOIS AU DD MOIS ANNEE
+    mb = WEEK_RE_B.search(line)
+    if mb:
+        year = mb.group(5)
+        ws = fr_date_to_iso(mb.group(1), mb.group(2), year)
+        we = fr_date_to_iso(mb.group(3), mb.group(4), year)
+        return ws, we
+
+    # Format A : DD AU DD MOIS ANNEE (mois et année partagés)
+    ma = WEEK_RE_A.search(line)
+    if ma:
+        month = ma.group(3)
+        year = ma.group(4)
+        ws = fr_date_to_iso(ma.group(1), month, year)
+        we = fr_date_to_iso(ma.group(2), month, year)
+        return ws, we
+
+    return None
 
 
 def extract_phones(text: str) -> List[str]:
@@ -110,11 +194,11 @@ def strip_phones_from_line(line: str) -> str:
 
     Retourne la partie « adresse » restante.
     """
-    # Remplacer chaque match téléphone par un espace
     cleaned = PHONE_LIKE_RE.sub(" ", line)
-    # Supprimer aussi les séparateurs orphelins (/, |, ;)
     cleaned = re.sub(r"[\/|;,]\s*$", "", cleaned)
     cleaned = re.sub(r"^\s*[\/|;,]", "", cleaned)
+    # Retirer aussi "TEL." / "TEL:" résiduel
+    cleaned = re.sub(r"\bTEL\s*[.:]\s*", " ", cleaned, flags=re.IGNORECASE)
     return clean(cleaned)
 
 
@@ -128,9 +212,9 @@ def looks_like_area(line: str) -> bool:
 
     Critères :
     - Non vide, entièrement en MAJUSCULES
-    - Ne commence pas par un mot-clé d'en-tête
+    - Ne commence pas par un mot-clé d'en-tête ou PHCIE/PHARMACIE
     - Ne contient pas de mot-clé d'adresse
-    - Longueur raisonnable (≤ 45 caractères)
+    - Longueur raisonnable (≤ 50 caractères)
     - N'est pas une ligne de chiffres purs (téléphones)
     """
     if not line:
@@ -142,13 +226,17 @@ def looks_like_area(line: str) -> bool:
     if any(up.startswith(prefix) for prefix in HEADER_PREFIXES):
         return False
 
+    # Exclure les lignes qui contiennent PHCIE/PHARMACIE
+    if "PHCIE" in up or "PHARMACIE" in up:
+        return False
+
     # Exclure les mots-clés d'adresse
-    words = set(re.findall(r"[A-ZÉÈÊËÂÀÎÏÔÖÛÜÇ]+", up))
+    words = set(re.findall(rf"[{_ACC}]+", up))
     if words & ADDRESS_KEYWORDS:
         return False
 
     # Exclure les lignes trop longues
-    if len(line) > 45:
+    if len(line) > 50:
         return False
 
     # Exclure les lignes de chiffres purs (téléphones)
@@ -157,6 +245,16 @@ def looks_like_area(line: str) -> bool:
 
     # Les zones dans les PDF UNPPCI sont en majuscules
     return line == up
+
+
+def _extract_pharmacy_name(rest: str) -> str:
+    """Extrait le nom de la pharmacie depuis le texte après PHCIE/PHARMACIE.
+
+    Coupe avant le premier séparateur (/, -, –, TEL.).
+    """
+    # Couper avant " / ", " - ", " – " ou "TEL."
+    name_raw = re.split(r"\s*[–]\s*|\s+-\s*|\s*/\s*|\bTEL\b", rest, maxsplit=1, flags=re.IGNORECASE)[0]
+    return clean(name_raw.strip())
 
 
 # ---------------------------------------------------------------------------
@@ -168,6 +266,12 @@ def parse_unppci_pdf(
     source_url: str = "",
 ) -> Dict[str, Any]:
     """Parse un PDF UNPPCI et retourne un payload structuré multi-semaines.
+
+    Gère deux formats de PDF :
+    - Format « Abidjan » : zones séparées sur leurs propres lignes, puis
+      lignes PHCIE en dessous.
+    - Format « Intérieur » : la ville est en préfixe sur la ligne pharmacie
+      (ex: "BOUAKE PHCIE BEL AIR / ...").
 
     Args:
         pdf_path: Chemin vers le fichier PDF.
@@ -181,6 +285,8 @@ def parse_unppci_pdf(
     weeks: List[Dict[str, Any]] = []
     current_week: Optional[Dict[str, Any]] = None
     current_area: Optional[Dict[str, Any]] = None
+    # Pour le format intérieur : cache des zones par nom dans la semaine courante
+    area_by_name: Dict[str, Dict[str, Any]] = {}
 
     total_lines = 0
     classified = {"week": 0, "area": 0, "pharmacy": 0, "address": 0,
@@ -190,8 +296,8 @@ def parse_unppci_pdf(
         logger.info("  Pages : %d", len(pdf.pages))
 
         for page_num, page in enumerate(pdf.pages, 1):
-            # layout=True pour mieux respecter la disposition en colonnes
-            txt = page.extract_text(layout=True) or ""
+            # extract_text() sans layout : plus fiable pour le parsing ligne par ligne
+            txt = page.extract_text() or ""
             lines = [clean(x) for x in txt.splitlines()]
             logger.debug("  Page %d : %d lignes", page_num, len(lines))
 
@@ -201,20 +307,20 @@ def parse_unppci_pdf(
                 total_lines += 1
 
                 # --- Détection de semaine ---
-                mweek = WEEK_RE.search(line)
-                if mweek:
-                    try:
-                        ws = fr_date_to_iso(mweek.group(1), mweek.group(2), mweek.group(3))
-                        we = fr_date_to_iso(mweek.group(4), mweek.group(5), mweek.group(6))
-                    except ValueError as exc:
-                        logger.warning("  Date invalide (page %d) : %s — %s", page_num, line, exc)
-                        continue
-
-                    current_week = {"week_start": ws, "week_end": we, "areas": []}
-                    weeks.append(current_week)
-                    current_area = None
-                    classified["week"] += 1
-                    logger.debug("    [SEMAINE] %s → %s", ws, we)
+                week_dates = _try_parse_week(line)
+                if week_dates:
+                    ws, we = week_dates
+                    # Éviter les doublons si la même semaine est répétée sur chaque page
+                    if weeks and weeks[-1]["week_start"] == ws and weeks[-1]["week_end"] == we:
+                        # Même semaine que la précédente, on continue dans le même contexte
+                        logger.debug("    [SEMAINE-REPEAT] %s → %s (page %d)", ws, we, page_num)
+                    else:
+                        current_week = {"week_start": ws, "week_end": we, "areas": []}
+                        weeks.append(current_week)
+                        current_area = None
+                        area_by_name = {}
+                        classified["week"] += 1
+                        logger.debug("    [SEMAINE] %s → %s", ws, we)
                     continue
 
                 # Avant la première semaine, on ignore tout
@@ -222,29 +328,63 @@ def parse_unppci_pdf(
                     classified["ignored_pre_week"] += 1
                     continue
 
-                # --- Lignes de section (ignorées) ---
-                if line.upper().startswith("SECTION"):
+                # --- Lignes de section / en-tête (ignorées) ---
+                up = line.upper()
+                if up.startswith("SECTION") or up.startswith("PERMANENCE") or up.startswith("TOUR DE GARDE"):
                     classified["skipped"] += 1
                     continue
 
-                # --- Détection de zone géographique ---
+                # --- Détection de zone géographique (format Abidjan) ---
                 if looks_like_area(line):
-                    current_area = {"area": line, "pharmacies": []}
-                    current_week["areas"].append(current_area)
+                    area_name = line.upper().strip()
+                    if area_name in area_by_name:
+                        current_area = area_by_name[area_name]
+                    else:
+                        current_area = {"area": line, "pharmacies": []}
+                        current_week["areas"].append(current_area)
+                        area_by_name[area_name] = current_area
                     classified["area"] += 1
                     logger.debug("    [ZONE] %s", line)
                     continue
 
-                # --- Détection de pharmacie ---
+                # --- Détection de pharmacie avec ville en préfixe (format Intérieur) ---
+                # Ex: "ABENGOUROU PHCIE DU MARCHE / MME ..."
+                # Ex: "BOUAKE PHCIE BEL AIR / M. KONE ..."
+                mcity = CITY_PHARM_RE.match(line)
+                if mcity and current_week is not None:
+                    city_prefix = mcity.group(1).strip().upper()
+                    rest = mcity.group(3).strip()
+
+                    # Vérifier que le préfixe ressemble à un nom de ville
+                    # (pas un mot-clé d'adresse ou un mot trop court)
+                    city_words = set(city_prefix.split())
+                    if not (city_words & ADDRESS_KEYWORDS) and len(city_prefix) >= 3:
+                        # Créer ou réutiliser la zone
+                        if city_prefix in area_by_name:
+                            current_area = area_by_name[city_prefix]
+                        else:
+                            current_area = {"area": city_prefix, "pharmacies": []}
+                            current_week["areas"].append(current_area)
+                            area_by_name[city_prefix] = current_area
+                            logger.debug("    [ZONE-AUTO] %s", city_prefix)
+
+                        name_raw = _extract_pharmacy_name(rest)
+                        phones = extract_phones(line)
+
+                        current_area["pharmacies"].append({
+                            "name_raw": name_raw,
+                            "address_raw": "",
+                            "phones_raw": phones,
+                        })
+                        classified["pharmacy"] += 1
+                        logger.debug("    [PHARM-CITY] %s > %s (tél: %s)", city_prefix, name_raw, phones)
+                        continue
+
+                # --- Détection de pharmacie standard (format Abidjan) ---
                 mph = PHARM_RE.match(line)
                 if mph and current_area is not None:
                     rest = mph.group(2).strip()
-
-                    # Nom : couper avant " - " / " – " / "/"
-                    name_raw = re.split(r"\s*[–-]\s*|\s*/\s*", rest, maxsplit=1)[0].strip()
-                    name_raw = clean(name_raw)
-
-                    # Téléphones sur la même ligne
+                    name_raw = _extract_pharmacy_name(rest)
                     phones = extract_phones(line)
 
                     current_area["pharmacies"].append({
@@ -259,11 +399,6 @@ def parse_unppci_pdf(
                 # --- Ligne d'adresse / téléphone (rattachée à la dernière pharmacie) ---
                 if current_area and current_area["pharmacies"]:
                     last = current_area["pharmacies"][-1]
-
-                    # Vérifier que ce n'est pas un faux positif
-                    if WEEK_RE.search(line):
-                        classified["skipped"] += 1
-                        continue
 
                     has_phone = bool(PHONE_LIKE_RE.search(line))
 
@@ -315,7 +450,7 @@ def parse_unppci_pdf(
     )
 
     if total_pharmacies == 0:
-        logger.warning("⚠ Aucune pharmacie extraite — vérifier la structure du PDF")
+        logger.warning("Aucune pharmacie extraite — vérifier la structure du PDF")
 
     return {
         "source": "unppci",
