@@ -1,0 +1,31 @@
+name: ETL Pharmacies de garde
+on:
+  schedule:
+    # Le 2 de chaque mois à 06:00 UTC (ajuste le fuseau si besoin)
+    - cron: '0 6 2 * *'
+  workflow_dispatch:  # permet de lancer à la main depuis l’onglet Actions
+jobs:
+  etl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+      - name: AnnuaireCI
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          cd etl
+          python annuaireci_scrape.py
+          python load_annuaireci_to_supabase.py
+      - name: UNPPCI
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          cd etl
+          python load_unppci_to_supabase.py

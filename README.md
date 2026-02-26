@@ -114,6 +114,7 @@ pharmacie-garde-ci/
 |-- .env                              # Variables d'environnement (Supabase)
 |-- .gitignore                        # Fichiers exclus du versionnage
 |-- README.md                         # Documentation (ce fichier)
+|-- requirements.txt                  # Dépendances Python du projet
 |
 |-- etl/
     |-- annuaireci_scrape.py          # [E] Scraping HTML annuaireci.com
@@ -154,7 +155,7 @@ pharmacie-garde-ci/
 ### Installation des dependances
 
 ```bash
-pip install requests beautifulsoup4 python-dateutil pdfplumber python-dotenv supabase unidecode
+pip install -r requirements.txt
 ```
 
 ### Liste des packages Python
@@ -166,7 +167,7 @@ pip install requests beautifulsoup4 python-dateutil pdfplumber python-dotenv sup
 | `python-dateutil` | Parsing de dates flexibles |
 | `pdfplumber` | Extraction de texte depuis les PDF |
 | `python-dotenv` | Chargement des variables `.env` |
-| `supabase` | Client Python pour Supabase (upsert, select) |
+| `supabase-py` | Client Python pour Supabase (module `supabase`) |
 | `unidecode` | Translitteration Unicode -> ASCII |
 | `urllib3` | Gestion des retries HTTP |
 
@@ -490,7 +491,7 @@ python -m venv .venv
 .venv\Scripts\activate       # Windows
 source .venv/bin/activate    # macOS/Linux
 
-pip install requests beautifulsoup4 python-dateutil pdfplumber python-dotenv supabase unidecode
+pip install -r requirements.txt
 ```
 
 ---

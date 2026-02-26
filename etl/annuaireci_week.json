@@ -1,25 +1,24 @@
 {
   "source": "annuaireci",
   "source_url": "https://annuaireci.com/pharmacies-de-garde/",
-  "week_start": "2026-02-14",
-  "week_end": "2026-02-20",
+  "week_start": "2026-02-21",
+  "week_end": "2026-02-27",
   "areas": [
     {
       "area": "ABENGOUROU",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Belle Fontaine (Grde)",
-          "address_raw": "QUARTIER HKB",
+          "name_raw": "Pharmacie du Carrefour",
+          "address_raw": "CHATEAU / VOIE PRINCIPALE DIOULAKRO / FACE STATION SHELL 1",
           "phones_raw": [
-            "0769353909",
-            "0708629483"
+            "2735913503"
           ]
         },
         {
-          "name_raw": "Pharmacie de l'Indénié",
-          "address_raw": "VOIE PRINCIPALE A COTE DE LA GRANDE MOSQUEE",
+          "name_raw": "Pharmacie Prunelle Marie",
+          "address_raw": "QUARTIER AGNIKRO EXTENSION",
           "phones_raw": [
-            "2735913604"
+            "2735913545"
           ]
         }
       ]
@@ -28,100 +27,119 @@
       "area": "ABOBO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie B.S.A",
-          "address_raw": "ABOBO ANOKOUA KOUTE SUR L'AXE ABOBO ANYAMA PRES DE LA CIE ET DE LA NOUVELLE GARE INTERNATIONALE",
+          "name_raw": "Pharmacie Belle Cité",
+          "address_raw": "ABOBO QUARTIER BC TERMINUS DES WOROS WOROS",
           "phones_raw": [
-            "0777811923",
-            "0777747021"
+            "0544292969"
           ]
         },
         {
-          "name_raw": "Pharmacie Biabou Mosquée",
-          "address_raw": "ABOBO BIABOU MORONOU / ROUTE D'ALEPE A COTE DE LA MOSQUEE COSIM",
+          "name_raw": "Pharmacie d'Abobo Baoulé",
+          "address_raw": "ABOBO BAOULE PRES DU COMMISSARIAT DU 34 EME ARRONDISSEMENT",
           "phones_raw": [
-            "0171514085",
-            "0565123350"
+            "0747983921",
+            "0141757010"
           ]
         },
         {
-          "name_raw": "Pharmacie de l'Antenne",
-          "address_raw": "EN FACE DU 21 EME ARRONDISSEMENT ABOBO DERRIERE RAIL",
+          "name_raw": "Pharmacie du Dokui (GDE)",
+          "address_raw": "AU DESSUS DU ZOO FACE STATION TOTAL / FACE CIE PLATEAU DOKUI",
           "phones_raw": [
-            "0595201869"
+            "0101608418"
           ]
         },
         {
-          "name_raw": "Pharmacie de la Mé (Nouvelle)",
-          "address_raw": "ABOBO GARE GRAND MARCHE ENTRE LA MAIRIE ET LA GENDARMERIE, VOIE EXPRESS D'ANYAMA",
+          "name_raw": "Pharmacie du Rail",
+          "address_raw": "ABOBO SAGBE / DERRIERE RAILS",
           "phones_raw": [
-            "2724383888",
-            "0707911999",
-            "0102928463"
+            "0747532532"
           ]
         },
         {
-          "name_raw": "Pharmacie EMS Santé",
-          "address_raw": "ABOBO AKEIKOI QUARTIER COLATIER DANS LA ZONE DE L'HOPITAL HOUPHOUET BOIGNY",
+          "name_raw": "Pharmacie Kennedy",
+          "address_raw": "ENTREE QUARTIER KENNEDY-CLOUETCHA / 400 M DU CARREFOUR SANS MANQUER",
           "phones_raw": [
-            "0172534040",
-            "2723550926"
+            "0141126767"
           ]
         },
         {
-          "name_raw": "Pharmacie Firdaous",
-          "address_raw": "ABOBO ANADOR EN FACE DE COCO SERVICE / AVANT LA STATION OLA",
+          "name_raw": "Pharmacie La Vierge du Signe",
+          "address_raw": "ABOBO NGUESSANKOI / DERRIERE LA STATION ORYX",
           "phones_raw": [
-            "0714016259"
+            "0778681174"
           ]
         },
         {
-          "name_raw": "Pharmacie la Paix",
-          "address_raw": "ABOBO COCOTERAIE / CARREFOUR TOTAL DOKUI A GAUCHE EN VENANT DU ZOO / EN FACE DU GROUPE SCOLAIRE NANTI",
+          "name_raw": "Pharmacie Marie Esther Abobo",
+          "address_raw": "ABOBO SUD COCOTERAIE ENTRE LE CHU D'ABOBO ET LE GROUPE SCOLAIRE D'EXCELLENCE CHILDREN OF AFRICA",
           "phones_raw": [
-            "2524002129"
+            "0700900910",
+            "2724525563"
           ]
         },
         {
-          "name_raw": "Pharmacie Matene (Nouvelle)",
-          "address_raw": "ABOBO AVOCATIER / ENTRE LA DGI ET LA CIE / ABOBO NORD A 400 M DU CAMP COMMANDO",
+          "name_raw": "Pharmacie Miria (Nouvelle)",
+          "address_raw": "ROUTE DU ZOO / CARREFOUR JEAN TAILLY EN FACE DU MARCHE DES GROSSISTES BUS N° 49 & 76",
           "phones_raw": [
-            "2523012034",
-            "0103260850",
-            "0758609027"
+            "0709846848",
+            "2521015738"
           ]
         },
         {
-          "name_raw": "Pharmacie N'Gohesse",
-          "address_raw": "PLAQUE I / ENTRE LE FOYER FEMININ ET LE MARCHE DE NUIT",
+          "name_raw": "Pharmacie Petit Marché du Dokui",
+          "address_raw": "ABOBO ENTRE LE PETIT MARCHE DE DOKUI ET LA MOSQUEE SUR LA VOIE MENANT AU COLLEGE MAHOU",
           "phones_raw": [
-            "0709841471",
-            "0749506896",
-            "0505002783"
+            "2722533867",
+            "0789760417"
           ]
         },
         {
-          "name_raw": "Pharmacie Notre Dame de Fatima",
-          "address_raw": "ABOBO PLATEAU DOKUI / SUR VOIE MOBIL-ANGRE / FACE PAROISSE STE MONIQUE",
+          "name_raw": "Pharmacie Rahman",
+          "address_raw": "ABOBO AGBEKOI PRES DE L'ECOLE NORD ET DE L'AGEEP",
           "phones_raw": [
-            "0707772149",
-            "0102868934"
+            "0556466412",
+            "0101820531",
+            "0779415101"
           ]
         },
         {
-          "name_raw": "Pharmacie Rond Point Samake (Ex Manzan)",
-          "address_raw": "ABOBO CARREFOUR SAMANKE",
+          "name_raw": "Pharmacie Résidentielle Abobote",
+          "address_raw": "ABOBOTE ENTRE LE CIMETIERE D'ABOBOTE ET LE CARREFOUR SAMAKE",
           "phones_raw": [
-            "0101016651",
-            "0709867074",
-            "0779445432"
+            "0705771745",
+            "2724576722",
+            "2724514128",
+            "0705505050"
           ]
         },
         {
-          "name_raw": "Pharmacie Sainte Anne Abobo Baoulé",
-          "address_raw": "ABOBO BAOULE CARREFOUR POWER NON LOIN DU GROUPE SCOLAIRE AKE LOBA",
+          "name_raw": "Pharmacie Route Akeikoi",
+          "address_raw": "ABOBO COLATIER SUR LA VOIE MENANT A AKEIKOI",
           "phones_raw": [
-            "0152358230",
-            "0507655310"
+            "0709862677",
+            "0709289894"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Servir",
+          "address_raw": "2EME ROND POINT AUTOROUTE ABOBO GARE PRES DU COLLEGE ST JOSEPH",
+          "phones_raw": [
+            "2524011820",
+            "0101611549"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Sogefiha",
+          "address_raw": "ENTRE COMMISSARIAT DU 15EME ET STATION MOBIL / BUS 41-08-49",
+          "phones_raw": [
+            "2724390051"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Tehoua",
+          "address_raw": "AUTOROUTE D'ANYAMA / 500 M APRES GENDARMERIE D'ABOBO SUR LA DROITE",
+          "phones_raw": [
+            "2724391313"
           ]
         }
       ]
@@ -130,51 +148,41 @@
       "area": "ABOBO PK 18",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Agnitio",
-          "address_raw": "ABOBO ANONKOUA KOUTE EXTENSION / A 50 M DU GROUPE SCOLAIRE PARTHENON / AU CARREFOUR ALLO",
+          "name_raw": "Pharmacie Amina T",
+          "address_raw": "ANYAMA N'DOTRE KOBAKRO",
           "phones_raw": [
-            "0140431010",
-            "0501073030"
+            "0713175015"
           ]
         },
         {
-          "name_raw": "Pharmacie Elie Faustine",
-          "address_raw": "ANYAMA N'DOTRE-BLANKRO",
+          "name_raw": "Pharmacie Carrefour Diallo",
+          "address_raw": "ABOBO PK 18 - NDOTRE « DERRIERE PONT » AU CARREFOUR DIALLO",
           "phones_raw": [
-            "0544112612",
-            "0140306954"
+            "0757048648"
           ]
         },
         {
-          "name_raw": "Pharmacie N'Dotre",
-          "address_raw": "ABOBO AXE NDOTRE ANYAMA / ENVIRON 600 M CARREFOUR NDOTRE",
+          "name_raw": "Pharmacie Carrefour Ndotre",
+          "address_raw": "ABOBO-NDOTRE / GD CARREFOUR NDOTRE / A 20 M DE LA VOIE NON BITUMEE",
           "phones_raw": [
-            "0777104714"
+            "0140072768",
+            "0586479387"
           ]
         },
         {
-          "name_raw": "Pharmacie Safir",
-          "address_raw": "PK 18 / ROUTE D'ANYAMA / DERRIERE PONT / PLACE ANCIENNE BOULANGERIE ROUTE NDOTRE",
+          "name_raw": "Pharmacie Résidence Abobo PK 18",
+          "address_raw": "AUTOROUTE D'ANYAMA / CARREFOUR ANCIEN MARCHE ENTRE CITE SICOGI",
           "phones_raw": [
-            "0709862635",
-            "0505835483"
+            "0758602612",
+            "0767251585"
           ]
         },
         {
-          "name_raw": "Pharmacie St Alexandre",
-          "address_raw": "EN ALLANT AU BOIS SEC / A L'ENTREE PRINCIPALE DE LA CITE SICOGI CONCORDE",
+          "name_raw": "Pharmacie Saint François",
+          "address_raw": "CARREFOUR TERRE ROUGE SUR L'AXE N'DOTRE STADE OLYMPIQUE",
           "phones_raw": [
-            "0759043542",
-            "0140296984"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie Synovie",
-          "address_raw": "ABOBO N'DOTRE EN FACE MARCHE GOURO",
-          "phones_raw": [
-            "0103910854",
-            "0798746189",
-            "2736857524"
+            "0788677869",
+            "0565460576"
           ]
         }
       ]
@@ -183,17 +191,21 @@
       "area": "ABOBODOUME / LOCODJRO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de Locodjoro SARL",
-          "address_raw": "APRES LE MARCHE EN ALLANT VERS ABOBODOUME",
+          "name_raw": "Pharmacie d'Abobodoumé",
+          "address_raw": "FACE NOUVEAU LYCEE MUNICIPAL D'ATTECOUBE / PRES DE LA FORMATION SANITAIRE M. FAITAI ABOBODOUME / CARREFOUR DES GBAKAS",
           "phones_raw": [
-            "0102252131"
+            "2721323990",
+            "0171288572",
+            "0758480789"
           ]
         },
         {
-          "name_raw": "Pharmacie St Aubin d'Agbayaté",
-          "address_raw": "YOPOUGON AGBAYATE QUARTIER JERUSALEM, CARREFOUR MOSQUEE BLANCHE EN FACE DE LA STATION NP",
+          "name_raw": "Pharmacie Mère de Graces",
+          "address_raw": "BANCO NORD SUR L'AXE INSTITUT DES AVEUGLES - S.I BETON",
           "phones_raw": [
-            "0546053436"
+            "23228502",
+            "0556004354",
+            "0720603560"
           ]
         }
       ]
@@ -202,11 +214,10 @@
       "area": "ABOISSO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Grace Marie Christi",
-          "address_raw": "QUARTIER SOKOURA LAVAGE",
+          "name_raw": "Pharmacie du Marché",
+          "address_raw": "FACE A LA PLACE ELLEIGAND",
           "phones_raw": [
-            "2733800151",
-            "0778111188"
+            "2721304063"
           ]
         }
       ]
@@ -215,10 +226,11 @@
       "area": "ADIAKE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie d'Adiaké",
+          "name_raw": "Pharmacie Moderne",
           "address_raw": "ADIAKE",
           "phones_raw": [
-            "2723530246"
+            "2721307694",
+            "0709682972"
           ]
         }
       ]
@@ -227,68 +239,62 @@
       "area": "ADJAME CENTRE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de la Grande Mosquée",
-          "address_raw": "BD. WILLIAM JACOB DERRIERE LES RAILS DE LA GRANDE MOSQUEE",
+          "name_raw": "Pharmacie Adjamé Bracodi",
+          "address_raw": "GARE NORD SOTRA DANS LA ZONE DE STATIONNEMENT DES GBAKAS / DANS LE SENS ADJAME ABOBO",
           "phones_raw": [
-            "0103121191",
-            "0504912531",
-            "2731959513"
+            "2720375433",
+            "0757494608"
           ]
         },
         {
-          "name_raw": "Pharmacie de la Providence",
-          "address_raw": "",
+          "name_raw": "Pharmacie Adjamé Latin",
+          "address_raw": "PROLONGEMENT DE L'AVENUE 13 / QUARTIER LATIN HABITAT EXTENSION / PRES DU PETIT MARCHE",
           "phones_raw": [
-            "1400097586",
-            "1283272037",
-            "0758094696"
+            "0140658649",
+            "0575163330"
           ]
         },
         {
-          "name_raw": "Pharmacie du Marché (Nvlle)",
-          "address_raw": "RUE DES AGOUAS / FACE AU GD MARCHE D'ADJAME",
+          "name_raw": "Pharmacie du Château d'Eau",
+          "address_raw": "BD WILLIAM JACOB/ ADJAME NORD/ EN DESCENDANT LES RAILS VERS LA SODECI",
           "phones_raw": [
-            "2720370617",
-            "0758094695"
+            "2720371168"
           ]
         },
         {
-          "name_raw": "Pharmacie Koro",
-          "address_raw": "ADJAME QUARTIER MARIE THERESE HOUPHOUET BOIGNY A COTE COLLEGE MONTHERLANT BATIMENT B",
+          "name_raw": "Pharmacie Fraternité (Nvlle)",
+          "address_raw": "PRES MATERNITE THERESE HOUPHOUET BOIGNY QUARTIER FRATERNITE",
           "phones_raw": [
-            "0152782727"
+            "2720375322",
+            "0142900020"
           ]
         },
         {
-          "name_raw": "Pharmacie Mary du 4è Pont Adjamé",
-          "address_raw": "ADJAME BRAMAKOTE, BLVD DE L'OUEST, PRES DE LA STATION SHELL, AXE SEBROKO-ATTECOUBE, FACE ANCIEN PARC AU MOUTON DE BORIBANA PRES ETS SYLLA ET FRERES",
+          "name_raw": "Pharmacie Gbede",
+          "address_raw": "BD. NANGUI ABROGOUA / FACE DISPENSAIRE D'ADJAME / NON LOIN DU COMMISSARIAT DU 3EME ARRONDT ET DU GD MARCHE",
           "phones_raw": [
-            "0596624259",
-            "0172821212",
-            "2731969428"
+            "0758094703"
           ]
         },
         {
-          "name_raw": "Pharmacie Sarah",
-          "address_raw": "ADJAME 220 LGTS / ROUTE CAMP GENDARMERIE AGBAN / CENTRE COMMERCIAL CARINE N' COUTURE / FACE QUARTIER CHICANE",
+          "name_raw": "Pharmacie Makissi",
+          "address_raw": "220 LGTS / PLACE DU CINEMA LIBERTE",
           "phones_raw": [
-            "2720390357"
+            "0757485432"
           ]
         },
         {
-          "name_raw": "Pharmacie Schiba",
-          "address_raw": "RUE DU DISPENSAIRE ANTITUBERCULEUX / FACE MARCHE GOURO (EX LOCAUX COFRUITEL)",
+          "name_raw": "Pharmacie Quartier Ebrie",
+          "address_raw": "FACE GARE STIF DALOA",
           "phones_raw": [
-            "0758176168",
-            "0140235965"
+            "2720371256"
           ]
         },
         {
-          "name_raw": "Pharmacie St Emmanuel",
-          "address_raw": "BD GENERAL DE GAULLE / QUARTIER MIRADOR FACE IMMEUBLE SICOGI / 30 M DU CARREFOUR",
+          "name_raw": "Pharmacie St Michel",
+          "address_raw": "AVENUE 13 / A 50 M DE L'EGLISE ST MICHEL / EN FACE DU CEG/HARRIS",
           "phones_raw": [
-            "2720379827",
-            "0102691938"
+            "2720370906"
           ]
         }
       ]
@@ -297,30 +303,28 @@
       "area": "ADJOUFFOU / GONZAQ / ANANI",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Belleville",
-          "address_raw": "QUARTIER BELLE VILLE JEAN FOLLY / 100 M CARREFOUR PETIT MARCHE / CARREFOUR LA LOBO",
+          "name_raw": "Pharmacie de la Bénédiction",
+          "address_raw": "CARREFOUR MOTAR DANS LA ZONE DU JOCKEY CLUB - GONZAGUEVILLE COCOTERAIE",
           "phones_raw": [
-            "0769007585",
-            "0777822668",
-            "0151401186"
+            "0143208214",
+            "2733734846",
+            "2833734835"
           ]
         },
         {
-          "name_raw": "Pharmacie Eloma de Gonzag",
-          "address_raw": "PORT BOUET GONZAGUEVILLE / EN FACE DU TERRAIN DE GONZAGUEVILLE / A 150 M DU CARREFOUR TERRE ROUGE",
+          "name_raw": "Pharmacie Santé Pour Tous",
+          "address_raw": "PORT BOUET / RUE CASIER CARREFOUR BACHIROU SUR LA VOIE DE L'EGLISE CATHOLIQUE CHRIST ROI DE JEAN FOLLY",
           "phones_raw": [
-            "0758176148",
-            "0565234823",
-            "0749032542"
+            "0101693891",
+            "0708024786"
           ]
         },
         {
-          "name_raw": "Pharmacie Rue Abraham",
-          "address_raw": "PORT BOUET GONZAGUEVILLE COCOTERAIE RUE ABRAHAM PRES DU MARCHE FRANÇAIS A 150 M DE LA VOIE EXPRESS DE GRAND BASSAM",
+          "name_raw": "Pharmacie St Louis de Gonzag",
+          "address_raw": "FACE LYCEE MUNICIPAL DE GONZAG",
           "phones_raw": [
-            "0102543200",
-            "0767707057",
-            "0748732674"
+            "0758094625",
+            "0142509855"
           ]
         }
       ]
@@ -329,19 +333,19 @@
       "area": "ADZOPE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Eureka",
-          "address_raw": "A PROXIMITE DU STADE MUNICIPAL ET DE LA BANQUE POPULAIRE",
+          "name_raw": "Pharmacie du Massan",
+          "address_raw": "RUE DU COMMERCE A COTE DE LA BANQUE ATLANTIQUE",
           "phones_raw": [
-            "0102195619",
-            "0102969810"
+            "2723540342",
+            "0757493853"
           ]
         },
         {
-          "name_raw": "Pharmacie Louise-Antoine",
-          "address_raw": "AU GRAND MARCHE D'ADZOPE FACE A L'EGLISE PROTESTANTE METHODISTE",
+          "name_raw": "Pharmacie Sainte Marie d'Elvé",
+          "address_raw": "ROUTE DES SCIERIES EN FACE DU PETIT PORTAIL DU PALAIS DE JUSTICE",
           "phones_raw": [
-            "0777954751",
-            "0152950348"
+            "0799131400",
+            "2735954010"
           ]
         }
       ]
@@ -350,20 +354,18 @@
       "area": "AGBOVILLE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de l'Agneby (GDE)",
+          "name_raw": "Pharmacie Moaye",
           "address_raw": "AGBOVILLE",
           "phones_raw": [
-            "0102036625",
-            "0778989621",
-            "0748002366"
+            "0778334088",
+            "0708782800"
           ]
         },
         {
-          "name_raw": "Pharmacie du Commerce (GDE)",
+          "name_raw": "Pharmacie Sini-Keneya",
           "address_raw": "AGBOVILLE",
           "phones_raw": [
-            "2723546040",
-            "0759067957"
+            "0758094603"
           ]
         }
       ]
@@ -372,10 +374,10 @@
       "area": "AGNIBILEKRO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Mairie-Nord",
+          "name_raw": "Pharmacie La Plénitude",
           "address_raw": "AGNIBILEKRO",
           "phones_raw": [
-            "0101975443"
+            "0102821918"
           ]
         }
       ]
@@ -384,11 +386,11 @@
       "area": "ALEPE / MONTEZO / BROFODOUME",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie des Générations de Montezo",
-          "address_raw": "MONTEZO",
+          "name_raw": "Pharmacie de Brofodoumé",
+          "address_raw": "BROFODOUME",
           "phones_raw": [
-            "0757493847",
-            "0707404708"
+            "0544907348",
+            "0142623272"
           ]
         }
       ]
@@ -410,11 +412,11 @@
       "area": "ANOUMABO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie du Pont d'Anoumabo",
-          "address_raw": "SISE A MARCORY ANOUMABO A 50 M APRES LE PONT D'ANOUMABO",
+          "name_raw": "Pharmacie Roma d'Anoumabo",
+          "address_raw": "FACE GROUPE SCOLAIRE ANOUMABO / 300 M AVANT ARTCI",
           "phones_raw": [
-            "2721261511",
-            "0777837857"
+            "2721280380",
+            "0171615532"
           ]
         }
       ]
@@ -423,27 +425,26 @@
       "area": "ANYAMA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie An-Asr",
+          "name_raw": "Pharmacie du Château",
           "address_raw": "ANYAMA",
           "phones_raw": [
-            "2723559822",
-            "0767482232"
+            "0758172991",
+            "0102818749"
           ]
         },
         {
-          "name_raw": "Pharmacie Eliel",
-          "address_raw": "ANYAMA QUARTIER RAN FACE A LA GARE",
+          "name_raw": "Pharmacie Le Labelle",
+          "address_raw": "ANYAMA QUARTIER ZOSSONKOI EXTENSION ENVIRON 500 M DE L'HOPITAL GENERAL D'ANYAMA",
           "phones_raw": [
-            "2733737356",
-            "0769742269"
+            "0595579506",
+            "0143544083"
           ]
         },
         {
-          "name_raw": "Pharmacie Santé Pour Tous d'Anyama",
-          "address_raw": "APRES CARREFOUR ANCIENNE GENDARMERIE DERRIERE ECOLE PMFA AU CARREFOUR ADJA MADOUE TOURE",
+          "name_raw": "Pharmacie Route d'Anyama (Nvlle)",
+          "address_raw": "ABOBO PK 18 FACE A LA SOCIETE OLAM (ex- UNICAFE) A 100M DE LA STATION PETROCI",
           "phones_raw": [
-            "0505080819",
-            "0779513181"
+            "0152788833"
           ]
         }
       ]
@@ -452,27 +453,26 @@
       "area": "ATTECOUBE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Agoua",
-          "address_raw": "ATTECOUBE FACE BOULANGERIE BBCO",
+          "name_raw": "Pharmacie Christ Stella",
+          "address_raw": "CITE FAIRMOND ATTECOUBE APRES NOUVELLE GENDARMERIE",
           "phones_raw": [
-            "0709312751",
-            "0140213273"
+            "0171561817",
+            "2720286296"
           ]
         },
         {
-          "name_raw": "Pharmacie d'Agban",
-          "address_raw": "CARREFOUR CITE FAIRMONT / VILLAGE AGBAN",
+          "name_raw": "Pharmacie du Rond Point",
+          "address_raw": "ATTECOUBE TERMINUS 04 / QUARTIER EBRIE (BIDJANTE)",
           "phones_raw": [
-            "2720372230",
-            "2720372167"
+            "2521015947",
+            "0707324376"
           ]
         },
         {
-          "name_raw": "Pharmacie Fatima (Nouvelle)",
-          "address_raw": "ATTECOUBE CARREFOUR DU PONT",
+          "name_raw": "Pharmacie Sebroko SARL",
+          "address_raw": "PRES DU GRAND MARCHE D'ATTECOUBE",
           "phones_raw": [
-            "0102561010",
-            "0554891773"
+            "2720376748"
           ]
         }
       ]
@@ -481,11 +481,10 @@
       "area": "AZAGUIE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Reine des Anges",
-          "address_raw": "AZAGUIE GARE CARREFOUR MARCHE",
+          "name_raw": "Pharmacie Aset la Divine",
+          "address_raw": "QUARTIER BAMBOU FACE POSTE CI",
           "phones_raw": [
-            "0506825578",
-            "0102984348"
+            "0102084874"
           ]
         }
       ]
@@ -494,10 +493,10 @@
       "area": "BAYOTA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Appy-Moya",
-          "address_raw": "BAYOTA 2 SUR L'AXE BAYOTA-SINFRA A 200M DE LA GENDARMERIE",
+          "name_raw": "Pharmacie Kata",
+          "address_raw": "BAYOTA 1 PRES DU MARCHE",
           "phones_raw": [
-            "0702776963"
+            "0789738544"
           ]
         }
       ]
@@ -515,18 +514,19 @@
           ]
         },
         {
-          "name_raw": "Pharmacie Akre (Albert Assamo)",
-          "address_raw": "NLLE GARE ROUTIERE",
+          "name_raw": "Pharmacie Amaryllis",
+          "address_raw": "BINGERVILLE DERRIERE LE JARDIN BOTANIQUE. CITES SPIAC, OPES 1, S 3 I, GARE DE TAXI",
           "phones_raw": [
-            "0757136836",
-            "0140952428"
+            "0141178292",
+            "2724308608"
           ]
         },
         {
-          "name_raw": "Pharmacie Havila (Ex Principale)",
-          "address_raw": "RUE PRINCIPALE",
+          "name_raw": "Pharmacie du Palais de Justice Bingerville",
+          "address_raw": "BINGERVILLE AV. BOUAKE RIS DE JUSTICE (PROVISOIRE)",
           "phones_raw": [
-            "0768704546"
+            "2722557907",
+            "0720203483"
           ]
         },
         {
@@ -538,34 +538,29 @@
           ]
         },
         {
-          "name_raw": "Pharmacie Notre Dame de la Nativité",
-          "address_raw": "AKOUAI SANTE A 100 M DU CARREFOUR CIE SUR LA ROUTE D'AKANDJE",
+          "name_raw": "Pharmacie Les Colombes",
+          "address_raw": "BINGERVILLE, AV KONAN KOUASSI LAMBERT, NON LOIN DE LA PAROISSE ST MARCEL, AKOUAI-SANTAI",
           "phones_raw": [
-            "2121805185"
+            "0715975559",
+            "2724364562"
           ]
         },
         {
-          "name_raw": "Pharmacie St Armel du Palais",
-          "address_raw": "SITUEE A 100 M DU PALAIS DE JUSTICE DE BINGERVILLE, AXE M'BATTO-BOUAKE (NANMOUE RESIDENCE)",
+          "name_raw": "Pharmacie Motto",
+          "address_raw": "BINGERVILLE BLVD DOMINIQUE QUATTARA, PRES DE L'HOTEL FREE WORLD, FACE AU QUARTIER PARIS VILLAGE A PROXIMITE DE LA CITE BNEDT",
           "phones_raw": [
-            "0565448181",
-            "0151318181"
+            "0505101311",
+            "0709537688",
+            "2722538235"
           ]
         },
         {
-          "name_raw": "Pharmacie St Sylvestre",
-          "address_raw": "CITE PALMA / FACE RESTAURANT COUP DE FREIN",
+          "name_raw": "Pharmacie Nissi (Nouvelle)",
+          "address_raw": "CITE FEH KESSE SUR LA NOUVELLE VOIE GOUDRONNEE / 300 M APRES L'ECOLE MATERNELLE LA PRUNELLE",
           "phones_raw": [
-            "2722519696",
-            "0758176159"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie Ste Marie de la Celle",
-          "address_raw": "BINGERVILLE DERRIERE EMPT / CITE PROMOGIM OLYMPIQUE (MTNKRO)",
-          "phones_raw": [
-            "0702952431",
-            "0151922591"
+            "2722401904",
+            "0787316648",
+            "0758338848"
           ]
         }
       ]
@@ -574,18 +569,19 @@
       "area": "BONDOUKOU",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Bondoukou-Marché",
-          "address_raw": "BONDOUKOU MARCHE",
+          "name_raw": "Pharmacie Choquet (Nlle)",
+          "address_raw": "BONDOUKOU",
           "phones_raw": [
-            "2735905789",
-            "0758682351"
+            "2735915151",
+            "0103642099"
           ]
         },
         {
-          "name_raw": "Pharmacie Nouvelle",
-          "address_raw": "BONDOUKOU",
+          "name_raw": "Pharmacie du Lycée",
+          "address_raw": "EN FACE DU LYCEE",
           "phones_raw": [
-            "2735915261"
+            "0777255730",
+            "0141408092"
           ]
         }
       ]
@@ -594,11 +590,11 @@
       "area": "BONOUA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Eden",
-          "address_raw": "BONOUA",
+          "name_raw": "Pharmacie Eben-Ezer",
+          "address_raw": "QUARTIER KOUMASSI EN FACE DE LA GARE ROUTIERE",
           "phones_raw": [
-            "0758094667",
-            "0711442982"
+            "2721309055",
+            "0102802008"
           ]
         }
       ]
@@ -607,17 +603,17 @@
       "area": "BOUAFLE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de l'Alliance (Nlle)",
-          "address_raw": "BOUAFLE",
+          "name_raw": "Pharmacie Providence",
+          "address_raw": "ZONE DE LA COOPEC",
           "phones_raw": [
-            "0707087957"
+            "0779488070"
           ]
         },
         {
-          "name_raw": "Pharmacie Fely",
-          "address_raw": "NOUVEAU MARCHE",
+          "name_raw": "Pharmacie St Augustin",
+          "address_raw": "QUARTIER COMMERCE",
           "phones_raw": [
-            "0151422258"
+            "2730689183"
           ]
         }
       ]
@@ -626,74 +622,78 @@
       "area": "BOUAKE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Dar Es Salam",
-          "address_raw": "ROUTE DE KATIOLA CARREFOUR PTIT MARCHE DJAMBOUROU FACE POLYCLINIQUE DU CENTRE",
+          "name_raw": "Pharmacie Cité Olympique",
+          "address_raw": "FACE FIBAKO",
           "phones_raw": [
-            "2731631016",
-            "0708146586"
+            "0758609043",
+            "0757891345",
+            "0143394292",
+            "0143394200"
           ]
         },
         {
-          "name_raw": "Pharmacie des Savanes (Nlle)",
-          "address_raw": "FACE SARI (CFAO)",
+          "name_raw": "Pharmacie de la Place",
+          "address_raw": "COMMERCE / FACE BICICI",
           "phones_raw": [
-            "0757143832",
-            "0748741522",
-            "0556691844"
+            "2731636063"
           ]
         },
         {
-          "name_raw": "Pharmacie du Centre",
-          "address_raw": "GRAND MARCHE DE BOUAKE",
+          "name_raw": "Pharmacie des Champs (Nvlle)",
+          "address_raw": "ROUTE DE GONFREVILLE FACE SODECI",
           "phones_raw": [
-            "0584037085"
+            "2731633362",
+            "0709839524"
           ]
         },
         {
-          "name_raw": "Pharmacie du Gbeke",
-          "address_raw": "EN FACE DE LA BHCI",
+          "name_raw": "Pharmacie El Nissi",
+          "address_raw": "KOKO, EN FACE DE LA PMI DE KOKO",
           "phones_raw": [
-            "2150038270",
-            "0758609041"
+            "2731603140",
+            "0101458222",
+            "0151030864"
           ]
         },
         {
-          "name_raw": "Pharmacie Keneya (Nlle)",
-          "address_raw": "FACE SACOBO",
+          "name_raw": "Pharmacie Liberté",
+          "address_raw": "ENTRE CINEMA LIBERTE ET LA MATERNITE SOKOURA",
           "phones_raw": [
-            "2731623072",
-            "0768625462"
+            "2731657019",
+            "0757143837"
           ]
         },
         {
-          "name_raw": "Pharmacie Marché Maroc",
-          "address_raw": "NON LOIN DU PETIT MARCHE MAROC I",
+          "name_raw": "Pharmacie Marché de Gros de Bouaké SARL",
+          "address_raw": "FACE MARCHE DE GROS",
           "phones_raw": [
-            "0799833361"
+            "2731601195",
+            "0709899548",
+            "0701680384",
+            "2731654056"
           ]
         },
         {
-          "name_raw": "Pharmacie Nlle du Château",
-          "address_raw": "QUARTIER AHOUGNANSSOU A COTE DU CHATEAU D'EAU",
+          "name_raw": "Pharmacie Notre Dame de l'Espérance SARL U",
+          "address_raw": "AIR FRANCE 1 ENTRE LE PONT DJIBO ET LES SAPEURS POMPIERS EN FACE DU COLLEGE RUTH FIDELE / IMMEUBLE LE LABELLE",
           "phones_raw": [
-            "0778977307",
-            "0747648895"
+            "2731624357",
+            "0768607579"
           ]
         },
         {
-          "name_raw": "Pharmacie Petit Marché Belleville 2",
-          "address_raw": "BELLEVILLE 2 PETIT MARCHE / ROUTE FETEKRO",
+          "name_raw": "Pharmacie Saint Jacques",
+          "address_raw": "DAR ES SALEM, AU CARREFOUR DU COLLEGE ST JACQUES",
           "phones_raw": [
-            "2724585196",
-            "0101111202"
+            "0586460328"
           ]
         },
         {
-          "name_raw": "Pharmacie T S F (Grande)",
-          "address_raw": "QUARTIER AIR FRANCE II A COTE DU COLLEGE VICTOR HUGO",
+          "name_raw": "Pharmacie St Pierre Nimbo (Nvlle)",
+          "address_raw": "NIMBO CARREFOUR ST PIERRE",
           "phones_raw": [
-            "2731635115",
-            "0700376114"
+            "2731632263",
+            "0703128171"
           ]
         }
       ]
@@ -702,18 +702,18 @@
       "area": "COCODY",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Boulevard de France",
-          "address_raw": "GD MARCHE DE COCODY / STATION AGIP BUS N° 28 – 74",
+          "name_raw": "Pharmacie de Cocody",
+          "address_raw": "CENTRE COMMERCIAL PETIT MARCHE SCORE / FACE ALLOCODROME",
           "phones_raw": [
-            "2722447408"
+            "2722442295"
           ]
         },
         {
-          "name_raw": "Pharmacie du Lycée Technique",
-          "address_raw": "ROUTE DU LYCEE TECHNIQUE PRES DE LA CLINIQUE DU GOCI",
+          "name_raw": "Pharmacie des Arts (GDE)",
+          "address_raw": "CENTRE COMMERCIAL DE LA CITE DES ARTS",
           "phones_raw": [
-            "2722446077",
-            "0707037772"
+            "2722449356",
+            "0102041711"
           ]
         }
       ]
@@ -722,10 +722,19 @@
       "area": "DABOU",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie des Villages",
+          "name_raw": "Pharmacie de Dabou (GDE)",
           "address_raw": "DABOU",
           "phones_raw": [
-            "2723574545"
+            "2723572061",
+            "0779150540"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Entente Dabou",
+          "address_raw": "QUARTIER MERTMETVILLE NON LOIN DE LA MAIRIE",
+          "phones_raw": [
+            "2734751128",
+            "0585213449"
           ]
         }
       ]
@@ -734,38 +743,39 @@
       "area": "DALOA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie des Antilopes",
+          "name_raw": "Pharmacie Carrefour Labia",
           "address_raw": "DALOA",
           "phones_raw": [
-            "2732788048"
+            "2732784992"
           ]
         },
         {
-          "name_raw": "Pharmacie du Parvis",
+          "name_raw": "Pharmacie Centrale",
           "address_raw": "DALOA",
           "phones_raw": [
-            "2732787057"
+            "2732782243",
+            "0747475555"
           ]
         },
         {
-          "name_raw": "Pharmacie Fatima Orly",
+          "name_raw": "Pharmacie du Grand Marché",
           "address_raw": "DALOA",
           "phones_raw": [
-            "0700110025"
+            "2732783535"
           ]
         },
         {
-          "name_raw": "Pharmacie Florel (Nouvelle)",
+          "name_raw": "Pharmacie Mayess",
           "address_raw": "DALOA",
           "phones_raw": [
-            "2732780532"
+            "2732781508"
           ]
         },
         {
-          "name_raw": "Pharmacie Paloma",
+          "name_raw": "Pharmacie St Edmond-Pierre",
           "address_raw": "DALOA",
           "phones_raw": [
-            "0544044416"
+            "0101468191"
           ]
         }
       ]
@@ -774,11 +784,10 @@
       "area": "DANANE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Salem",
+          "name_raw": "Pharmacie Ave Maria du Nimba",
           "address_raw": "DANANE",
           "phones_raw": [
-            "2733729660",
-            "0171986430"
+            "0500826464"
           ]
         }
       ]
@@ -787,11 +796,11 @@
       "area": "DIEGONEFLA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Mairie (Grande)",
+          "name_raw": "Pharmacie de Diégonéfla",
           "address_raw": "DIEGONEFLA",
           "phones_raw": [
-            "0723015081",
-            "0787760200"
+            "0777886570",
+            "0140982824"
           ]
         }
       ]
@@ -800,24 +809,33 @@
       "area": "DIVO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Centrale",
+          "name_raw": "Pharmacie de l'Amitié",
           "address_raw": "DIVO",
           "phones_raw": [
-            "2732760349"
+            "2732760116"
           ]
         },
         {
-          "name_raw": "Pharmacie de la Mairie",
+          "name_raw": "Pharmacie Espérance",
           "address_raw": "DIVO",
           "phones_raw": [
-            "2732763075"
+            "2732763104"
           ]
         },
         {
-          "name_raw": "Pharmacie Gare de Hiré",
+          "name_raw": "Pharmacie Gremian (Grande)",
+          "address_raw": "GREMIAN FACE GARE DE GAGNOA",
+          "phones_raw": [
+            "0584763330",
+            "2724336936"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Kinninya",
           "address_raw": "DIVO",
           "phones_raw": [
-            "0595153697"
+            "2732763453",
+            "0142418775"
           ]
         }
       ]
@@ -826,18 +844,18 @@
       "area": "DUEKOUE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Kokoman Vie",
+          "name_raw": "Pharmacie de la Gare de Duékoué",
           "address_raw": "DUEKOUE",
           "phones_raw": [
-            "2721587315",
-            "0787751373"
+            "0757493830"
           ]
         },
         {
-          "name_raw": "Pharmacie Wahon",
+          "name_raw": "Pharmacie de la Paix Duékoué",
           "address_raw": "DUEKOUE",
           "phones_raw": [
-            "0757029057"
+            "0714257767",
+            "0715878787"
           ]
         }
       ]
@@ -846,34 +864,32 @@
       "area": "GAGNOA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie du Château",
-          "address_raw": "MOSQUEE EN BOIS",
+          "name_raw": "Pharmacie Dar Es Salam",
+          "address_raw": "NOUVEAU GOUDRON",
           "phones_raw": [
-            "2732773838"
+            "0707694792",
+            "2732771148"
           ]
         },
         {
-          "name_raw": "Pharmacie Manuella",
-          "address_raw": "ONY-BABRE",
+          "name_raw": "Pharmacie du Gognoa",
+          "address_raw": "FACE AU GRAND MARCHE",
           "phones_raw": [
-            "0575415631",
-            "0768369647"
+            "2732772292"
           ]
         },
         {
-          "name_raw": "Pharmacie Notre Dame Immaculée Conception",
-          "address_raw": "FACE CLINIQUE FROMAGER",
+          "name_raw": "Pharmacie Mathé",
+          "address_raw": "COCOVILLE",
           "phones_raw": [
-            "2732772488"
+            "2732772083"
           ]
         },
         {
-          "name_raw": "Pharmacie Ste Pauline",
-          "address_raw": "FACE PREFECTURE",
+          "name_raw": "Pharmacie St François d'Assise",
+          "address_raw": "QUARTIER SOLEIL",
           "phones_raw": [
-            "2732772562",
-            "2732772964",
-            "0101456714"
+            "2732777793"
           ]
         }
       ]
@@ -882,31 +898,24 @@
       "area": "GRAND-BASSAM",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie du Marché de Grand Bassam",
+          "name_raw": "Pharmacie Jlog",
           "address_raw": "GRAND-BASSAM",
           "phones_raw": [
-            "2721301813"
+            "0776353536"
           ]
         },
         {
-          "name_raw": "Pharmacie Leana",
-          "address_raw": "GRAND-BASSAM",
+          "name_raw": "Pharmacie Quartier Air France",
+          "address_raw": "QUARTIER AIR FRANCE",
           "phones_raw": [
-            "0797018464"
+            "2721312183"
           ]
         },
         {
-          "name_raw": "Pharmacie Mockeyville",
+          "name_raw": "Pharmacie Yélé",
           "address_raw": "GRAND-BASSAM",
           "phones_raw": [
-            "0799447846"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie Petit Marché",
-          "address_raw": "GRAND-BASSAM",
-          "phones_raw": [
-            "2721303005"
+            "2721302685"
           ]
         }
       ]
@@ -915,11 +924,10 @@
       "area": "GUIGLO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de Guiglo",
+          "name_raw": "Pharmacie Nikla",
           "address_raw": "GUIGLO",
           "phones_raw": [
-            "0707098537",
-            "0505938383"
+            "2733705380"
           ]
         }
       ]
@@ -928,84 +936,79 @@
       "area": "II PLATEAUX",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Bellevue",
-          "address_raw": "ANGRE 8EME TRANCHE SOCELI II - CAFEIER 8 / APRES LE TERMINUS 205 ET LA PHCIE LES ARCADES SUR LA VOIE EN PAVE",
+          "name_raw": "Pharmacie Arc en Ciel",
+          "address_raw": "II PLATEAUX RUE DES JARDINS / CARREFOUR COMMISSARIAT 12ème ARRONDT",
           "phones_raw": [
-            "2722500624",
-            "0779330611",
-            "0707099508"
+            "2722413390"
           ]
         },
         {
-          "name_raw": "Pharmacie Emeraude",
-          "address_raw": "DERRIERE LA STATION TOTAL SOCOCE II PLATEAUX EN FACE DE LA CLINIQUE LE ROCHER",
+          "name_raw": "Pharmacie Bonne Santé",
+          "address_raw": "COCODY II PLATEAUX / ROUTE WILLIAMSVILLE",
           "phones_raw": [
-            "2721572833",
-            "0153204267"
+            "2722256029",
+            "0586579236",
+            "0768609205"
           ]
         },
         {
-          "name_raw": "Pharmacie Espérance (Nlle)",
-          "address_raw": "DERRIERE LE MARCHE ET LA MOSQUEE DE LA DJIBI",
+          "name_raw": "Pharmacie Les Amis",
+          "address_raw": "COCODY II PLATEAUX 8EME TRANCHE / CARREFOUR BCEAO SUR LA GRANDE VOIE MENANT A LA CNPS",
           "phones_raw": [
-            "2722533301",
-            "0709834002"
+            "2722256040",
+            "0758171619"
           ]
         },
         {
-          "name_raw": "Pharmacie La Rédemption SARLU",
-          "address_raw": "ANGRE CHATEAU D'EAU / FIN GOUDRON EN FACE DU TERRAIN MILITAIRE (FPM)",
+          "name_raw": "Pharmacie Les Tulipes",
+          "address_raw": "II PLATEAUX BD LATRILLE / ESPACE SANTA MARIA FACE MOSQUEE AGBAPLEU",
           "phones_raw": [
-            "2522016196",
-            "0789436370"
+            "2722425017"
           ]
         },
         {
-          "name_raw": "Pharmacie Notre Dame du Grand Signe",
-          "address_raw": "COCODY ANGRE AXE 7ème ET 8ème TRANCHE APRES LE PONT SORO",
+          "name_raw": "Pharmacie Luminance K",
+          "address_raw": "QUARTIER DJIBI GROUPEMENT 4000 BATIM-CI 300 M DE LA MOSQUEE D'ANGRE ET DU CENTRE DE SANTE",
           "phones_raw": [
-            "2722426413",
-            "0789127515"
+            "0788061741",
+            "0545954539"
           ]
         },
         {
-          "name_raw": "Pharmacie Renaissance",
-          "address_raw": "COCODY II PLATEAUX / COMMANDANT SANON JUSTE DERRIERE APRES ECOLE ITS II PLATEAUX",
+          "name_raw": "Pharmacie Orchid",
+          "address_raw": "II PLATEAUX / BOULEVARD LATRILLE CARREFOUR MACACI",
           "phones_raw": [
-            "2733778022"
+            "2722404275"
           ]
         },
         {
-          "name_raw": "Pharmacie St Gil",
-          "address_raw": "II PLATEAUX RUE DES JARDINS / FACE STATION CORLAY AVANT L'ECHANGEUR / VERS L'ECOLE DE POLICE",
+          "name_raw": "Pharmacie St Ambroise",
+          "address_raw": "ANGRE MAHOU A LA RUE DES BARS",
           "phones_raw": [
-            "2722419410",
-            "2722411542"
+            "0707203477",
+            "2722534778"
           ]
         },
         {
-          "name_raw": "Pharmacie Star 9 Angré",
-          "address_raw": "ANGRE PETRO IVOIRE ENTRE L'EGLISE ST AMBROISE DU JUBILE ET LE COLLEGE VICTOR LOBA",
+          "name_raw": "Pharmacie St Christophe",
+          "address_raw": "ANGRE BD LATRILLE / STAR 5 CARREFOUR PETRO IVOIRE ROUTE D'ABOBO",
           "phones_raw": [
-            "0788359911",
-            "0500657171",
-            "0778965438"
+            "0702934259",
+            "0153330002"
           ]
         },
         {
-          "name_raw": "Pharmacie Ste Cécile",
-          "address_raw": "COCODY II PLATEAUX RUE DES JARDINS AU NIVEAU DU CENTRE PAROISSIAL STE CECILE",
+          "name_raw": "Pharmacie St Harry",
+          "address_raw": "QUARTIER DJIBI / VOIE PRINCIPALE / 400 M APRES TERMINUS BUS 82 – 81 / PRES DU SUPER MARCHE DISCOUNT",
           "phones_raw": [
-            "2722426335",
-            "2722541749",
-            "0703938397"
+            "2722417790"
           ]
         },
         {
-          "name_raw": "Pharmacie Ste Monique",
-          "address_raw": "RUE ANGRE – PLATEAU DOKUI / CARREFOUR LYCEE MAHOU",
+          "name_raw": "Pharmacie Ste Dorothée",
+          "address_raw": "ANGRE EXTENSION ENTRE LE COLLEGE LES FLORIANES ET LA PAROISSE SAINTE DOROTHEE",
           "phones_raw": [
-            "0758176166"
+            "0779593884"
           ]
         }
       ]
@@ -1014,18 +1017,19 @@
       "area": "ISSIA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie (Nouvelle) Espoir",
+          "name_raw": "Pharmacie Divine Grace",
           "address_raw": "ISSIA",
           "phones_raw": [
-            "2732770176",
-            "0707711760"
+            "2734778220",
+            "0757488140",
+            "0171570707"
           ]
         },
         {
-          "name_raw": "Pharmacie Notre Dame de la Délivrance",
+          "name_raw": "Pharmacie du Commerce",
           "address_raw": "ISSIA",
           "phones_raw": [
-            "0709810709"
+            "2732770045"
           ]
         }
       ]
@@ -1034,21 +1038,18 @@
       "area": "KM 17 / SONGON",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Apôdjan M'Brathé",
-          "address_raw": "KM 17 / SONGON",
+          "name_raw": "Pharmacie Atele",
+          "address_raw": "CARREFOUR HEVEA-GRAVIER",
           "phones_raw": [
-            "2723426487",
-            "0716073129",
-            "0594854949"
+            "0702242436"
           ]
         },
         {
-          "name_raw": "Pharmacie Notre Dame de la Paix",
-          "address_raw": "ADIAPODOUME A COTE DU RESTAURANT CHEZ ZONGO",
+          "name_raw": "Pharmacie Carrefour Songon Dagbé",
+          "address_raw": "CARREFOUR JACQUEVILLE EN FACE DU MARCHE MUNICIPAL DE SONGON",
           "phones_raw": [
-            "0758176225",
-            "0142241678",
-            "0576575353"
+            "0767518431",
+            "0708639564"
           ]
         }
       ]
@@ -1057,40 +1058,31 @@
       "area": "KORHOGO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Chigata",
+          "name_raw": "Pharmacie Amour",
           "address_raw": "KORHOGO",
           "phones_raw": [
-            "0501281616"
+            "0703033006"
           ]
         },
         {
-          "name_raw": "Pharmacie Notre Dame",
+          "name_raw": "Pharmacie du 14",
           "address_raw": "KORHOGO",
           "phones_raw": [
-            "2736863790"
+            "2736850473"
           ]
         },
         {
-          "name_raw": "Pharmacie Palais de Justice",
-          "address_raw": "KORHOGO",
+          "name_raw": "Pharmacie Mongaha",
+          "address_raw": "FEUX TRICOLORES DU QUARTIER MONGAHA",
           "phones_raw": [
-            "2736853755",
-            "0787702033"
+            "2536005816"
           ]
         },
         {
-          "name_raw": "Pharmacie Principale",
-          "address_raw": "KORHOGO",
+          "name_raw": "Pharmacie Tchergnim",
+          "address_raw": "ROUTE FERKE FACE DOMICILE KASSOUM COULIBALY",
           "phones_raw": [
-            "2736860835"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie Sanmien de Natio",
-          "address_raw": "QUARTIER NATIO KOBADARA, ROUTE DE FERKE",
-          "phones_raw": [
-            "2735959796",
-            "0700077888"
+            "2736862315"
           ]
         }
       ]
@@ -1099,47 +1091,46 @@
       "area": "KOUMASSI",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de la Bagoé",
-          "address_raw": "KOUMASSI REMBLAIS - BD DU CAMEROUN / CARREFOUR STATION MOBIL ET SODECI MARCORY / FACE CENTRE MEDICAL LIRING",
+          "name_raw": "Pharmacie de Sopim",
+          "address_raw": "KOUMASSI SOPIM",
           "phones_raw": [
-            "2721286414"
+            "2721366932"
           ]
         },
         {
-          "name_raw": "Pharmacie de Prodomo",
-          "address_raw": "BD CAMEROUN KOUMASSI PRODOMO / CARREFOUR SOPIM PRODOMO / APRES TERRAIN INCH'ALLAH",
+          "name_raw": "Pharmacie du Canal",
+          "address_raw": "KOUMASSI REMBLAIS / ENTRE LE GD CARREFOUR GABI (FEU TRICOLORE) ET CARREFOUR MILLENIUM 80 M DU MAQUIS « LE TAPIS ROUGE »",
           "phones_raw": [
-            "2721288343"
+            "2721362748"
           ]
         },
         {
-          "name_raw": "Pharmacie Fanny",
-          "address_raw": "QUARTIER AKLOMIABLA APRES LES RESIDENCES AGOUTIS / CARREFOUR DU LYCEE MUNICIPAL / TERMINUS BUS 05 ET 32",
+          "name_raw": "Pharmacie El Rapha de Zoé Bruno",
+          "address_raw": "KOUMASSI CARREFOUR HOPITAL DE SOWETO",
           "phones_raw": [
-            "2721360907"
+            "2721206240",
+            "0787931893"
           ]
         },
         {
-          "name_raw": "Pharmacie Inchallah",
-          "address_raw": "KOUMASSI REMBLAIS PRES DU CARREFOUR SANS FIL A 50 M DU GROUPE SCOLAIRE ENTENTE",
+          "name_raw": "Pharmacie Iroko (GDE)",
+          "address_raw": "KOUMASSI REMBLAIS / LIGNE BUS 32 PRES ECOLE BAD 5",
           "phones_raw": [
-            "2721364701",
-            "0101539999"
+            "2721564353"
           ]
         },
         {
-          "name_raw": "Pharmacie Mpike",
-          "address_raw": "QUARTIER MAIRIE / DERRIERE LA MAIRIE DE KOUMASSI",
+          "name_raw": "Pharmacie St Albert",
+          "address_raw": "KOUMASSI GD MARCHE / FACE EGLISE METHODISTE CITE DES GRACES",
           "phones_raw": [
-            "2721362575",
-            "0707478082"
+            "0101444365"
           ]
         },
         {
-          "name_raw": "Pharmacie St Georges",
-          "address_raw": "KOUMASSI SICOGI PRES DU CAMP COMMANDO",
+          "name_raw": "Pharmacie Ste Foi",
+          "address_raw": "KOUMASSI TERMINUS BUS 05 / FACE LYCEE MUNICIPAL",
           "phones_raw": [
-            "2721360375"
+            "2721561740"
           ]
         }
       ]
@@ -1148,34 +1139,25 @@
       "area": "MAN",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie des Cascades",
-          "address_raw": "50 M DE LA STATION OLA SUR LA VOIE PRINCIPALE DE L'AXE MAN-BIANKOUMA",
-          "phones_raw": [
-            "2724577710",
-            "0101038391"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie Di Georges",
-          "address_raw": "QUARTIER GRAND GBAPLEU FACE DE NIDHALEY (CONSEIL REGIONAL DU TONKPI)",
-          "phones_raw": [
-            "0748927000",
-            "0575437374",
-            "0707404607"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie La Colombe (Nvlle)",
+          "name_raw": "Pharmacie de la Grande Mosquée",
           "address_raw": "MAN",
           "phones_raw": [
-            "0133780749"
+            "0101475132"
           ]
         },
         {
-          "name_raw": "Pharmacie Lymanya",
+          "name_raw": "Pharmacie Fidelitas",
+          "address_raw": "GBAPEU / NON LOIN DE L'INFAS EN FACE DE LA BOULANGERIE DE L'ETOILE",
+          "phones_raw": [
+            "0153517010",
+            "0715964439"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Odelia",
           "address_raw": "MAN",
           "phones_raw": [
-            "2733730369"
+            "2735993527"
           ]
         }
       ]
@@ -1184,26 +1166,24 @@
       "area": "MARCORY NORD",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie du Petit Marché",
-          "address_raw": "RUE DE L'EGLISE STE THERESE EN ALLANT VERS LA PMI MARCORY / 50 M DU MAQUIS LE VATICAN BUS N° 32",
+          "name_raw": "Pharmacie Bethesda Résidentielle",
+          "address_raw": "130 M DE LA CLINIQUE FARAH A 200 M DU TERMINUS 04",
           "phones_raw": [
-            "2721262433"
+            "0102015079"
           ]
         },
         {
-          "name_raw": "Pharmacie Tiacoh",
-          "address_raw": "CARREFOUR AUTOROUTE & BD DU GABON ANGLE / RUE PIERRE & MARIE CURIE",
+          "name_raw": "Pharmacie du Grand Marché de Marcory",
+          "address_raw": "MARCORY NORD",
           "phones_raw": [
-            "2721262815"
+            "2721569096"
           ]
         },
         {
-          "name_raw": "Pharmacie TSF Marcory",
-          "address_raw": "AVENUE TSF MARCORY / FACE COMMISSARIAT DU 9ème ARRONDISSEMENT",
+          "name_raw": "Pharmacie Ste Thérèse",
+          "address_raw": "AVENUE T S F",
           "phones_raw": [
-            "2721267812",
-            "0151487570",
-            "0799708436"
+            "2721267710"
           ]
         }
       ]
@@ -1212,24 +1192,25 @@
       "area": "MARCORY SUD",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de Biétry",
-          "address_raw": "BD DE MARSEILLE (AVANT WAFOU) / CENTRE COMMERCIAL HOLLIDAY / IMMEUBLE SGBCI",
+          "name_raw": "Pharmacie de la Galerie",
+          "address_raw": "BD. GISCARD D'ESTAING ANGLE RUE THOMAS EDISON (SUPER HAYAT)",
           "phones_raw": [
-            "2721248689"
+            "2721352473"
           ]
         },
         {
-          "name_raw": "Pharmacie du Carrefour",
-          "address_raw": "ANGLE BD GISCARD D'ESTAING RUE CHEVALIER DU CLIEU / ZONE 4 A / FACE BICICI MARCORY",
+          "name_raw": "Pharmacie Notre Dame d'Afrique",
+          "address_raw": "37 BD DE MARSEILLE / FACE COLLEGE NOTRE DAME D'AFRIQUE",
           "phones_raw": [
-            "2721351166"
+            "2721252526"
           ]
         },
         {
-          "name_raw": "Pharmacie Pierre & Marie Curie",
-          "address_raw": "CENTRE COMMERCIAL FRANCISCO / A COTE DE RENAULT ET SUPER EDEN",
+          "name_raw": "Pharmacie St Antoine",
+          "address_raw": "MARCORY ZONE 4 / RUE DR BLANCHARD FACE AU NOUVEAU SIEGE RMO, A 100M DE LA MOSQUEE",
           "phones_raw": [
-            "2721358030"
+            "0788883061",
+            "0700000081"
           ]
         }
       ]
@@ -1238,11 +1219,24 @@
       "area": "ODIENNE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie du Denguélé",
+          "name_raw": "Pharmacie des Frontières",
           "address_raw": "ODIENNE",
           "phones_raw": [
-            "0768772578",
-            "0768772576"
+            "0707849038",
+            "0606990092"
+          ]
+        }
+      ]
+    },
+    {
+      "area": "OUME",
+      "pharmacies": [
+        {
+          "name_raw": "Pharmacie Source de Vie",
+          "address_raw": "OUME",
+          "phones_raw": [
+            "0767338131",
+            "2721748639"
           ]
         }
       ]
@@ -1251,11 +1245,12 @@
       "area": "PLATEAU",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Ste Anne",
-          "address_raw": "1 RUE LECOEUR PLATEAU FACE AMBASSADE DE FRANCE",
+          "name_raw": "Pharmacie Les Harmonies (Nvlle)",
+          "address_raw": "NON LOIN DU CAMP MILITAIRE GALIENI / 20 M DE LA GARE SOTRA DE LA CITE ADMINISTRATIVE BD CARDE FACE IMMEUBLE LES HARMONIES",
           "phones_raw": [
-            "0584919393",
-            "0705922790"
+            "2720220492",
+            "0102020476",
+            "0160502278"
           ]
         }
       ]
@@ -1264,26 +1259,17 @@
       "area": "PORT-BOUET CENTRE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de la Cité Policière",
-          "address_raw": "CITE POLICIERE ROUTE DE VRIDI",
+          "name_raw": "Pharmacie de l'Océan",
+          "address_raw": "ANGLE AV. PACIFIQUE & RUE DES ESPADONS PROLONGEMENT DE LA BOULANGERIE BOE ET DU CEG / PORT BOUET",
           "phones_raw": [
-            "0707075800"
+            "2721277848"
           ]
         },
         {
-          "name_raw": "Pharmacie de Port-Bouët",
-          "address_raw": "PRES DU CENTRE PILOTE DES JEUNES DE PORT BOUET",
+          "name_raw": "Pharmacie Djigui",
+          "address_raw": "FACE NOUVEAU MARCHE / 30 M DU COMMISSARIAT / ANGLE AVENUE ATLANTIQUE ET AV. PACIFIQUE",
           "phones_raw": [
-            "2721278917",
-            "0140770868"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie Malon",
-          "address_raw": "PORT BOUET QUARTIER",
-          "phones_raw": [
-            "2721279614",
-            "0768260040"
+            "2721277586"
           ]
         }
       ]
@@ -1292,82 +1278,87 @@
       "area": "RIVIERA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Analya",
-          "address_raw": "400 M DU CENTRE HOSPITALIER UNIVERSITAIRE REGIONALE D'ANGRE / AU FEU FACE CITE GESTOCI",
+          "name_raw": "Pharmacie Bethel - Attoban",
+          "address_raw": "RIVIERA ATTOBAN / FACE COLLEGE JULES FERRY",
           "phones_raw": [
-            "0708951925"
+            "2722432283",
+            "0778397646",
+            "0747114841"
           ]
         },
         {
-          "name_raw": "Pharmacie BD Mitterrand",
-          "address_raw": "ROUTE DE BINGERVILLE / CARREFOUR BONOUMIN KM 9 APRES CARREFOUR STE FAMILLE",
+          "name_raw": "Pharmacie Bon Pasteur",
+          "address_raw": "RIVIERA III CARREFOUR LYCEE FRANÇAIS FACE EGLISE BON PASTEUR PRES DU COLLEGE L'ARDOISE",
           "phones_raw": [
-            "2722479045"
+            "0758094675",
+            "2722470405",
+            "2722470391"
           ]
         },
         {
-          "name_raw": "Pharmacie du Patrimoine",
-          "address_raw": "COCODY RIVIERA ATTOBAN AV DU COLONEL ZINSOU CARREFOUR CAMP",
+          "name_raw": "Pharmacie Bonoumin (Nvlle)",
+          "address_raw": "COCODY RIVIERA BONOUMIN / VOIE MENANT AU COLLEGE ANDRE MALRHAUX A L'EGLISE LA DESTINATION (NOUVEAU GOUDRON)",
           "phones_raw": [
-            "2722319429",
-            "0501413333"
+            "0707936850",
+            "2722494934"
           ]
         },
         {
-          "name_raw": "Pharmacie Erica",
-          "address_raw": "CARREFOUR MARCHE DE LA PALMERAIE / DIRECTION CARREFOUR GUIRAUD ET TOUT DROIT FIN GOUDRON",
+          "name_raw": "Pharmacie de l'Immaculée Conception",
+          "address_raw": "RIVIERA GOLF / FACE CITE « LES JARDINS DE LA RIVIERA» NON LOIN PETITE MOSQUEE DE LA RIVIERA APRES L'UNIVERSITE FHB",
           "phones_raw": [
-            "2722493375",
-            "0506464746"
+            "2722541393",
+            "0909773030"
           ]
         },
         {
-          "name_raw": "Pharmacie Palmeraie SARL",
-          "address_raw": "RIVIERA III – ENTRE LES DEUX STATIONS D'ESSENCE ET LE ROND POINT / EN FACE DE L'ESPACE DE JEU SOCOCE",
+          "name_raw": "Pharmacie des Cités Synacassi SARL",
+          "address_raw": "RIVIERA 3 SYNACASSI ROUTE DE MBADON",
           "phones_raw": [
-            "2722479119"
+            "0758141405",
+            "2522001315"
           ]
         },
         {
-          "name_raw": "Pharmacie Riviera M'Badon",
-          "address_raw": "RIVIERA M'BADON A COTE DE L'AMBASSADE DE CHINE",
+          "name_raw": "Pharmacie Dunia (Nouvelle)",
+          "address_raw": "II PLATEAUX 7EME TRANCHE / ROUTE D'ATTOBAN / 50 M COMMISSARIAT 30EME ARRONDISSEMENT",
           "phones_raw": [
-            "2724316712",
-            "0759372039"
+            "2722246159",
+            "0779050505"
           ]
         },
         {
-          "name_raw": "Pharmacie St Jean Paul II de Bonoumin",
-          "address_raw": "RIVIERA BONOUMIN 500 M AU NORD D'ABIDJAN MALL APRES CARREFOUR DJEDJE MADY",
+          "name_raw": "Pharmacie Marie Esther (Grande)",
+          "address_raw": "RIVIERA PALMERAIE / ROUTE DU PROGRAMME 4 / LYCEE SAINT VIATEUR",
           "phones_raw": [
-            "2722288687",
-            "0779419276"
+            "0778990259",
+            "0779775771",
+            "2722495223"
           ]
         },
         {
-          "name_raw": "Pharmacie St Pierre d'Anono",
-          "address_raw": "COCODY-RIVIERA / ZONE DE LA GARE D'ANONO",
+          "name_raw": "Pharmacie Rue Ministre (Nvlle)",
+          "address_raw": "RIVIERA PALMERAIE / RUE MINISTRE / DERRIERE LA BICICI PALMERAIE",
           "phones_raw": [
-            "2122800374",
-            "2724337587",
-            "2724563667"
+            "2722595667",
+            "0769165615",
+            "0504584456"
           ]
         },
         {
-          "name_raw": "Pharmacie Tera (Nouvelle)",
-          "address_raw": "II PLATEAUX 7 EME TRANCHE DANS LE CENTRE COMMERCIAL TERA",
+          "name_raw": "Pharmacie St Moise (GDE)",
+          "address_raw": "COCODY 9EME TRANCHE ABRI 2000 SUR VOIE PRINCIPALE ENTRE ROND POINT ADO ET CELUI AVANT LA PHCIE HERMES",
           "phones_raw": [
-            "0777887414",
-            "2722424991"
+            "2722496136",
+            "0102439410",
+            "0718588177"
           ]
         },
         {
-          "name_raw": "Pharmacie Val de Grâce",
-          "address_raw": "RIVIERA PALMERAIE / ROUTE DE L'HOTEL BELLECOTE A 200 M DU COLLEGE LE FIGUIER",
+          "name_raw": "Pharmacie St Viateur",
+          "address_raw": "RIVIERA PALMERAIE ROND POINT EN FACE DU COL. GENERAL D'ANGRE",
           "phones_raw": [
-            "0703812181",
-            "0103871515",
-            "2722499344"
+            "2722880080"
           ]
         }
       ]
@@ -1376,43 +1367,42 @@
       "area": "SAN PEDRO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Béatitudes",
+          "name_raw": "Pharmacie Divine Providence",
           "address_raw": "SAN PEDRO",
           "phones_raw": [
-            "2734713187",
-            "0708944057"
+            "0108031027",
+            "0747488056"
           ]
         },
         {
-          "name_raw": "Pharmacie de l'Archange",
+          "name_raw": "Pharmacie Nabenou",
           "address_raw": "SAN PEDRO",
           "phones_raw": [
-            "2734710162",
-            "0707099392"
+            "2734704483",
+            "0777741813"
           ]
         },
         {
-          "name_raw": "Pharmacie de la Vie",
+          "name_raw": "Pharmacie Nour",
           "address_raw": "SAN PEDRO",
           "phones_raw": [
-            "2733716440",
-            "0104692254",
-            "0748370992"
+            "0103014301",
+            "0709257777"
           ]
         },
         {
-          "name_raw": "Pharmacie des Mosquées",
+          "name_raw": "Pharmacie Quartier Francophonie",
           "address_raw": "SAN PEDRO",
           "phones_raw": [
-            "0779445487"
+            "0767078462"
           ]
         },
         {
-          "name_raw": "Pharmacie Nitoro",
+          "name_raw": "Pharmacie Ste Marie",
           "address_raw": "SAN PEDRO",
           "phones_raw": [
-            "2734713911",
-            "0707822327"
+            "0102363638",
+            "0757409350"
           ]
         }
       ]
@@ -1421,11 +1411,11 @@
       "area": "SINFRA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de la Gare de Sinfra",
-          "address_raw": "CARREFOUR DOUAFLA",
+          "name_raw": "Pharmacie Bokosso Nouvelle",
+          "address_raw": "RUE DU COMMERCE FACE AU SUPER MARCHE KING CASH",
           "phones_raw": [
-            "0172669201",
-            "0565696207"
+            "0757489516",
+            "2734760505"
           ]
         }
       ]
@@ -1434,18 +1424,19 @@
       "area": "SOUBRE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de l'Immaculée",
-          "address_raw": "MARCHE SOUBRE PRES DE CDCI",
+          "name_raw": "Pharmacie de la Gare SARL",
+          "address_raw": "GARE FACE UTB",
           "phones_raw": [
-            "2734722112"
+            "2734722877",
+            "0505381849"
           ]
         },
         {
-          "name_raw": "Pharmacie du Sud Ouest SARL",
-          "address_raw": "RUE DES BANQUES",
+          "name_raw": "Pharmacie de la Mairie de Soubré",
+          "address_raw": "ENTREE CAMP MANOI CARREFOUR DU LYCEE PRES DE LA MAIRIE",
           "phones_raw": [
-            "2734722135",
-            "0778161141"
+            "2734723075",
+            "0101475179"
           ]
         }
       ]
@@ -1454,11 +1445,10 @@
       "area": "TIASSALE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Ste Marie",
+          "name_raw": "Pharmacie de Tiassalé",
           "address_raw": "TIASSALE",
           "phones_raw": [
-            "0140166200",
-            "0101837332"
+            "0700130036"
           ]
         }
       ]
@@ -1467,24 +1457,27 @@
       "area": "TREICHVILLE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie des 3 Mosquées",
-          "address_raw": "DANS L'AVENUE 8 RUE 22 BARREE A 300 M DE LA STATION SHELL IMMEUBLE NANAN YAMOUSSOU RUE 38",
+          "name_raw": "Pharmacie du Levant",
+          "address_raw": "TREICHVILLE AVENUE 19 RUE 13 / DERRIERE CHAWARMA TALAAT",
           "phones_raw": [
-            "2721242196"
+            "2721528953",
+            "0706991991"
           ]
         },
         {
-          "name_raw": "Pharmacie des Brasseurs",
-          "address_raw": "FACE AU CHU DE TREICHVILLE / ENTRE STATION BP ET IMPRIMERIE ABIDJAN CONTINU / 1 RUE DES BRASSEURS",
+          "name_raw": "Pharmacie La Grâce (Nlle)",
+          "address_raw": "RUE 12 AVENUE 14",
           "phones_raw": [
-            "2721251725"
+            "0101628329",
+            "2721522747"
           ]
         },
         {
-          "name_raw": "Pharmacie Ste Jeanne",
-          "address_raw": "ENTREE MARCHE DE BELLEVILLE / FACE STATION PETRO IVOIRE",
+          "name_raw": "Pharmacie Ste Adèle",
+          "address_raw": "TREICHVILLE FACADE ARRIERE DU MARCHE DE BELLEVILLE / COTE FRIPERIE NON LOIN DU SUPER MARCHE BONPRIX – PONT VOLTAIRE",
           "phones_raw": [
-            "2721245741"
+            "2721254700",
+            "0584044446"
           ]
         }
       ]
@@ -1493,11 +1486,10 @@
       "area": "VRIDI",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Vridi-Village",
-          "address_raw": "VRIDI CANAL / ZONE DU ROND POINT TERMINUS BUS 19 / NON LOIN DE LA SIR",
+          "name_raw": "Pharmacie Epiphanie",
+          "address_raw": "VRIDI CITE FACE SALLE POLYVALENTE / GENDARMERIE",
           "phones_raw": [
-            "2721391370",
-            "2721275860"
+            "2721270023"
           ]
         }
       ]
@@ -1506,20 +1498,18 @@
       "area": "WILLIAMSVILLE",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Christ Marie de Paillet",
-          "address_raw": "PAILLET EXTENSION / ENTRE LE CARREFOUR HUMMER ET LA MAISON BLANCHE DES PETITS",
+          "name_raw": "Pharmacie Carrefour HMA",
+          "address_raw": "PAILLET EXTENSION / NON LOIN DU ZOO CARREFOUR CIE",
           "phones_raw": [
-            "2720374000",
-            "2720274328",
-            "0757489443"
+            "0779473922",
+            "0576545214"
           ]
         },
         {
-          "name_raw": "Pharmacie de Williamsville",
-          "address_raw": "FACE MOSQUEE ET MARCHE DE WILLIAMSVILLE / PRES DE LA SGBCI",
+          "name_raw": "Pharmacie du Progrès",
+          "address_raw": "FACE EGLISE ST KIZITO",
           "phones_raw": [
-            "2720370345",
-            "0709003891"
+            "2720371525"
           ]
         }
       ]
@@ -1528,45 +1518,43 @@
       "area": "YAMOUSSOUKRO",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie de la Fondation",
-          "address_raw": "ETAGE DIABY",
-          "phones_raw": [
-            "0711331445",
-            "0709884652",
-            "0702834732"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie de la Mosquée",
+          "name_raw": "Pharmacie Aboh",
           "address_raw": "YAMOUSSOUKRO",
           "phones_raw": [
-            "0748750078",
-            "2730640533"
+            "2730643976",
+            "0758609039",
+            "0778983322"
           ]
         },
         {
-          "name_raw": "Pharmacie de Morofé (GDE)",
-          "address_raw": "CARREFOUR BANNY",
+          "name_raw": "Pharmacie Azi",
+          "address_raw": "NON LOIN DE LA GENDARMERIE",
           "phones_raw": [
-            "0757492313",
-            "2723579750"
+            "2730642686",
+            "0709839142"
           ]
         },
         {
-          "name_raw": "Pharmacie des 220 LGTS",
+          "name_raw": "Pharmacie des Boulevards",
+          "address_raw": "QUARTIER MOROFE, ENTRE LE VILLAGE SOS ET LE CAFOP PRES DE « CHEZ NATHALIE »",
+          "phones_raw": [
+            "0707814930"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Djaha",
+          "address_raw": "KOKRENOU, ZONE EGLISE CMA",
+          "phones_raw": [
+            "2731952167",
+            "0702838065"
+          ]
+        },
+        {
+          "name_raw": "Pharmacie Mariel",
           "address_raw": "YAMOUSSOUKRO",
           "phones_raw": [
-            "0758460033",
-            "0555969197",
-            "2730642205"
-          ]
-        },
-        {
-          "name_raw": "Pharmacie Sanitas",
-          "address_raw": "YAMOUSSOUKRO",
-          "phones_raw": [
-            "0757143827",
-            "2730640888"
+            "0101605515",
+            "0758176171"
           ]
         }
       ]
@@ -1575,12 +1563,13 @@
       "area": "YOPOUGON Secteur 1",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Gesco Fourrière (Grande)",
-          "address_raw": "YOPOUGON GESCO A 100M DE LA FOURRIERE AU PIED DU NOUVEL ECHANGEUR",
+          "name_raw": "Pharmacie William Ponty",
+          "address_raw": "YOPOUGON SICOGI FACE COLLEGE WILLIAM PONTY",
           "phones_raw": [
-            "2523008156",
-            "0500164848",
-            "0712466623"
+            "0142719033",
+            "0142719028",
+            "0777307804",
+            "0707324371"
           ]
         }
       ]
@@ -1589,11 +1578,12 @@
       "area": "YOPOUGON Secteur 10",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Niangon Lokoa",
-          "address_raw": "YOPOUGON NIANGON LOKOA / SITUE APRES LE LYCEE EHIVET GBAGBO",
+          "name_raw": "Pharmacie Jericho",
+          "address_raw": "YOPOUGON NIANGON SUR GOUDRON (ROUTE DE PAYS BAS)",
           "phones_raw": [
-            "2723450780",
-            "0101259124"
+            "2723456238",
+            "0101180225",
+            "0789401420"
           ]
         }
       ]
@@ -1602,11 +1592,11 @@
       "area": "YOPOUGON Secteur 11",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Michel Archange",
-          "address_raw": "YOPOUGON CITE VERTE 100 M DU TERMINUS BUS 44",
+          "name_raw": "Pharmacie Maty",
+          "address_raw": "YOPOUGON NIANGON NORD / ENTRE STATION LUBAFRIQUE & COLLEGE ANADOR",
           "phones_raw": [
-            "2723462814",
-            "0747557402"
+            "2723462715",
+            "0504986025"
           ]
         }
       ]
@@ -1615,11 +1605,11 @@
       "area": "YOPOUGON Secteur 12",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Sandrina",
-          "address_raw": "YOPOUGON ANANERAIE ENTRE CARREFOUR DE LA SORBONNE ET L'ECOLE LIBANAISE / PRES DE LA NOUVELLE SGBCI",
+          "name_raw": "Pharmacie de Port Bouet 2 SARL (Nvlle)",
+          "address_raw": "ROUTE NIANGON NORD - FACE MOSQUEE AL BILAL / BUS N° 39",
           "phones_raw": [
-            "0778991930",
-            "0749279732"
+            "2723466053",
+            "0103218860"
           ]
         }
       ]
@@ -1628,10 +1618,10 @@
       "area": "YOPOUGON Secteur 13",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Inox",
-          "address_raw": "YOPOUGON ROUTE DE DABOU CARREFOUR CITE VERTE NON LOIN DU MARCHE DJEDJE BAGNON",
+          "name_raw": "Pharmacie Alicia",
+          "address_raw": "YOPOUGON ANANERAIE ROUTE DE DABOU ENTRE MANUTENTION AFRICAINE ET CARREFOUR SODECI FACE QUARTIER BONIKRO",
           "phones_raw": [
-            "0504099982"
+            "2723451152"
           ]
         }
       ]
@@ -1640,10 +1630,11 @@
       "area": "YOPOUGON Secteur 14",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Mamy Adjoua",
-          "address_raw": "YOPOUGON NON LOIN DE LA CITE MAMIE ADJOUA",
+          "name_raw": "Pharmacie St Clément",
+          "address_raw": "YOPOUGON FACE AU CHU",
           "phones_raw": [
-            "0758176226"
+            "2723415312",
+            "0703949878"
           ]
         }
       ]
@@ -1652,11 +1643,10 @@
       "area": "YOPOUGON Secteur 15",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Zone Industrielle",
-          "address_raw": "YOPOUGON ZONE INDUSTRIELLE ENTREE PRINCIPALE CONTIGUE A L'AGENCE BICICI",
+          "name_raw": "Pharmacie Santé Plus",
+          "address_raw": "YOPOUGON GESCO AUTOROUTE DU NORD 100 METRES AVANT LE CORRIDOR",
           "phones_raw": [
-            "2723465108",
-            "0759008107"
+            "2723525866"
           ]
         }
       ]
@@ -1665,10 +1655,24 @@
       "area": "YOPOUGON Secteur 16",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Souraley",
-          "address_raw": "YOPOUGON PORT BOUET II / PRES DU CARREFOUR DU CENTRE SOCIAL DE PORT BOUET II A 200 M DERRIERE LE COLLEGE GUICHANROLAIN",
+          "name_raw": "Pharmacie Bethel de Beago",
+          "address_raw": "YOPOUGON QUARTIER BEAGO / PRES DE L'EGLISE CATHOLIQUE STE TRINITE",
           "phones_raw": [
-            "0102819701"
+            "0787437727",
+            "0140057648"
+          ]
+        }
+      ]
+    },
+    {
+      "area": "YOPOUGON Secteur 17",
+      "pharmacies": [
+        {
+          "name_raw": "Pharmacie Carrefour Commissaire Micao",
+          "address_raw": "YOPOUGON ZONE INDUSTRIELLE / QUARTIER DEGUERPI",
+          "phones_raw": [
+            "0719464607",
+            "0594946262"
           ]
         }
       ]
@@ -1677,24 +1681,11 @@
       "area": "YOPOUGON Secteur 2",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie St André",
-          "address_raw": "YOPOUGON SICOGI / APRES LA CATHEDRALE ST ANDRE",
+          "name_raw": "Pharmacie Tereza",
+          "address_raw": "YOPOUGON SOGEFIHA « MAGASIN » / ROUTE NIANGON",
           "phones_raw": [
-            "0757492306",
-            "2520010185"
-          ]
-        }
-      ]
-    },
-    {
-      "area": "YOPOUGON Secteur 3",
-      "pharmacies": [
-        {
-          "name_raw": "Pharmacie Saint Paul Yop (Nouvelle)",
-          "address_raw": "YOPOUGON SIPOREX DERRIERE LA POSTE / RUE DU MARCHE GOURO",
-          "phones_raw": [
-            "0564288352",
-            "0710082919"
+            "2523012000",
+            "0708768464"
           ]
         }
       ]
@@ -1703,10 +1694,37 @@
       "area": "YOPOUGON Secteur 4",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Bel Air",
-          "address_raw": "CARREFOUR GFCI",
+          "name_raw": "Pharmacie Yacine",
+          "address_raw": "YOPOUGON TOIT ROUGE APRES LA POSTE / SUR VOIE ALLANT A LA LONACI ET AU COLLEGE OFFOUMOU YAPO",
           "phones_raw": [
-            "0758499694"
+            "0789844982",
+            "0141000243"
+          ]
+        }
+      ]
+    },
+    {
+      "area": "YOPOUGON Secteur 5",
+      "pharmacies": [
+        {
+          "name_raw": "Pharmacie Nikibel",
+          "address_raw": "YOPOUGON SOPIM / ANCIEN BEL AIR AVANT CARREFOUR COLLEGE ST LOUIS ZONE DU MARCHE GFCI FACE MAQUIS LE « PITCH »",
+          "phones_raw": [
+            "0102117727",
+            "0758499692",
+            "2523001467"
+          ]
+        }
+      ]
+    },
+    {
+      "area": "YOPOUGON Secteur 6",
+      "pharmacies": [
+        {
+          "name_raw": "Pharmacie Carrefour Koweit",
+          "address_raw": "TOIT ROUGE / ROUTE ABOBODOUME",
+          "phones_raw": [
+            "2723458407"
           ]
         }
       ]
@@ -1715,12 +1733,11 @@
       "area": "YOPOUGON Secteur 7",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Assonvon",
-          "address_raw": "200 M DU CINEMA SAGUIDIBA / PRES HOTEL ASSONVON / DERRIERE LA CNPS",
+          "name_raw": "Pharmacie St Laurent",
+          "address_raw": "YOPOUGON CAMP MILITAIRE / GARE GBAKAS / 200 M TERMINUS SOTRA / BUS 37",
           "phones_raw": [
-            "0758094710",
-            "0714368463",
-            "0564348708"
+            "0758094725",
+            "2723504879"
           ]
         }
       ]
@@ -1729,11 +1746,12 @@
       "area": "YOPOUGON Secteur 8",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Phalènes",
-          "address_raw": "NIANGON SUD A GAUCHE / EGLISE DES ASSEMBLEES DE DIEU",
+          "name_raw": "Pharmacie Sideci-LEM",
+          "address_raw": "A 300 M DU SUPERMARCHE « SUPER U » ANCIEN CINEMA SAGUIDIBA EN ALLANT VERS LA SIDECI",
           "phones_raw": [
-            "2723460183",
-            "0101138175"
+            "2723426884",
+            "0704539758",
+            "0505061960"
           ]
         }
       ]
@@ -1742,11 +1760,11 @@
       "area": "YOPOUGON Secteur 9",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie St Hermann",
-          "address_raw": "BASE CIE / ENTREE FACE STATION PETRO IVOIRE",
+          "name_raw": "Pharmacie de la Félicité",
+          "address_raw": "YOPOUGON MAROC CARREFOUR OBAMA ENTRE STATION SHELL ET HOTEL KIMI",
           "phones_raw": [
-            "23507277",
-            "03387491"
+            "0720107090",
+            "2523002052"
           ]
         }
       ]
@@ -1755,55 +1773,56 @@
       "area": "ZONE AKOUEDO - PALMERAIE - ABATTA",
       "pharmacies": [
         {
-          "name_raw": "Pharmacie Boulevard Y4",
-          "address_raw": "RIVIERA AKOUEDO PALMERAIE / ZONE ATCI ENTRE LES DEUX RONDS POINTS DU NOUVEAU ET ANCIEN CAMP / A 100 METRES DU GARAGE CFA",
+          "name_raw": "Pharmacie Cite Sir",
+          "address_raw": "ABATTA VERS LA CITE SIR",
           "phones_raw": [
-            "0575374415",
-            "0171236556"
+            "0707843380"
           ]
         },
         {
-          "name_raw": "Pharmacie Catleyas",
-          "address_raw": "BD MITTERRAND CARREFOUR ABATTA",
+          "name_raw": "Pharmacie Eliezer 9",
+          "address_raw": "LAURIER 8 ET 9 / ANCIENNE ROUTE DE BINGERVILLE SUR L'AXE ALLANT DU SUPERMARCHE BON PRIX DE FAYA VERS L'EGLISE WINNERS CHAPEL",
           "phones_raw": [
-            "2722470779"
+            "0787167309",
+            "07781378"
           ]
         },
         {
-          "name_raw": "Pharmacie Cephas",
-          "address_raw": "ROUTE ABATTA / APRES SICTA QUARTIER ORIBAT",
+          "name_raw": "Pharmacie Hosanna",
+          "address_raw": "RIVIERA 3 TRIANGLE / ENTRE LES CENTRES DES IMPOTS DE LA RIVIERA / PRES DE LA CLINIQUE ST VIATEUR",
           "phones_raw": [
-            "0777745857",
-            "0707694867"
+            "2722552559",
+            "0101172931",
+            "0797643350"
           ]
         },
         {
-          "name_raw": "Pharmacie Keliam",
-          "address_raw": "CARREFOUR ABATTA / A GAUCHE ROUTE CITE SIR EN BORDURE DU NOUVEAU GOUDRON",
+          "name_raw": "Pharmacie Kamon N'Sio",
+          "address_raw": "ABATTA RIVIERA EPHRATA IMMEUBLE SYMPHONIUM EN DIRECTION DE LA CITE BNETD ET LA CITE SIR EN VENANT DU NOUVEAU GOUDRON",
           "phones_raw": [
-            "0704730435"
+            "2721524153",
+            "0713265141",
+            "0564306805"
           ]
         },
         {
-          "name_raw": "Pharmacie Livie",
-          "address_raw": "AKOUEDO VILLAGE ENTRE DISPENSAIRE ET GARE DES WORO WORO / NON LOIN DE LA CITE ATCI",
+          "name_raw": "Pharmacie Nido des Lauriers",
+          "address_raw": "RIVIERA 5 / BD MITTERRAND FACE PETIT PORTAIL DE LA CITE GENIE 2000",
           "phones_raw": [
-            "2722474878",
-            "0101832484",
-            "0749508438"
+            "2722476927",
+            "0777000076"
           ]
         },
         {
-          "name_raw": "Pharmacie St Martin de Faya",
-          "address_raw": "RIVIERA FAYA PROLONGEMENT CLOTURE NOUVEAU CAMP MILITAIRE D'AKOUEDO APRES CITE GENIE 2000",
+          "name_raw": "Pharmacie Route d'Abatta",
+          "address_raw": "ROUTE D'ABATTA CITE DU PORT AUTONOME D'ABIDJAN",
           "phones_raw": [
-            "2722556939",
-            "0103453888",
-            "0759822115"
+            "0702288222",
+            "2724340339"
           ]
         }
       ]
     }
   ],
-  "scraped_at": "2026-02-15"
+  "scraped_at": "2026-02-26"
 }
